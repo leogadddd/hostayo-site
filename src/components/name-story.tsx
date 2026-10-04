@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -93,6 +94,17 @@ export function NameStory() {
           {STEPS.map((s, i) => (
             <span key={s.key} className={cn("h-1.5 rounded-full transition-all duration-500", step === i ? "w-8 bg-pine" : "w-1.5 bg-pine/20")} />
           ))}
+        </div>
+
+        <div
+          aria-hidden
+          className={cn(
+            "absolute bottom-8 flex flex-col items-center gap-1 text-xs font-semibold tracking-[0.2em] text-pine/50 uppercase transition-opacity duration-500",
+            step < 2 ? "opacity-100" : "opacity-0",
+          )}
+        >
+          Keep scrolling
+          <ChevronDown className="size-5 animate-bounce motion-reduce:animate-none" />
         </div>
       </div>
     </section>
