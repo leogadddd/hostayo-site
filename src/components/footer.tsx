@@ -3,6 +3,7 @@ import { Logo } from "./logo";
 
 const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/login?demo=1";
 
+const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL;
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
 
 const COLUMNS = [
@@ -45,6 +46,7 @@ export function Footer() {
             <a href={`${APP_URL}/privacy`} className="transition-colors hover:text-white">Privacy Policy</a>
             <a href={`${APP_URL}/cookies`} className="transition-colors hover:text-white">Cookie Policy</a>
             <a href={`${APP_URL}/refunds`} className="transition-colors hover:text-white">Refund Policy</a>
+            {SUPPORT_EMAIL ? <a href={`mailto:${SUPPORT_EMAIL}`} className="transition-colors hover:text-white">Contact</a> : null}
           </nav>
           <a href="#top" className="inline-flex items-center gap-2 transition-colors hover:text-white">
             Back to top <ArrowUp className="size-4" />
