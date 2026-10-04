@@ -8,7 +8,7 @@ import { SmoothScroll } from "@/components/smooth-scroll";
 import { Story } from "@/components/story";
 import { TimelineViz } from "@/components/visuals";
 
-const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa";
+const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/login?demo=1";
 
 function Cta({ tone = "pine", children }: { tone?: "pine" | "clay"; children: React.ReactNode }) {
   return (
