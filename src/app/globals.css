@@ -86,8 +86,22 @@ body {
 .animate-float {
   animation: float 9s ease-in-out infinite;
 }
+@keyframes drift {
+  0%, 100% {
+    transform: translateX(-28px);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(28px);
+    opacity: 1;
+  }
+}
+.animate-drift {
+  animation: drift 10s ease-in-out infinite;
+}
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
+  .animate-drift,
   .animate-float {
     animation: none;
   }

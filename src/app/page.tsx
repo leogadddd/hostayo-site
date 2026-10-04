@@ -26,12 +26,12 @@ function Cta({ tone = "pine", children }: { tone?: "pine" | "clay"; children: Re
   );
 }
 
-const BUILT_FOR = ["1–20 apartments, villas or rooms", "Direct bookings from Messenger & Facebook", "Deposits & balances tracked", "Cleaners & caretakers", "Asia/Manila time"];
+const BUILT_FOR = ["One room or a whole portfolio", "Direct bookings from Messenger & Facebook", "Deposits & balances tracked", "Cleaners & caretakers", "Asia/Manila time"];
 
 
 const NUMBERS = [
   { value: 1, suffix: "", label: "welcome page per booking", note: "Guests get their dates, rules and balance in one link." },
-  { value: 20, suffix: "", prefix: "1–", label: "units per host", note: "From one apartment to a small portfolio." },
+  { value: 1, suffix: "", label: "calendar for every unit", note: "One room or fifty, they all live in the same view." },
   { value: 4, suffix: "", label: "roles with their own access", note: "Owner, Admin, Operations Manager, Staff." },
   { value: 0, suffix: "", label: "overlapping bookings", note: "Blocked, even when two people book at once." },
 ];
@@ -58,14 +58,18 @@ export default function Home() {
           <div aria-hidden className="grid-fade pointer-events-none absolute inset-0" />
           <div aria-hidden className="pointer-events-none absolute inset-0 hidden lg:block">
             {[
-              ["left-[4%] top-[18%] w-40", "bg-sage"],
-              ["left-[10%] top-[18%] mt-12 w-28", "bg-sand-deep/60"],
-              ["left-[2%] top-[46%] w-32", "bg-moss/50"],
-              ["right-[4%] top-[14%] w-36", "bg-clay/40"],
-              ["right-[9%] top-[14%] mt-12 w-28", "bg-stay-hold"],
-              ["right-[2%] top-[42%] w-40", "bg-sage-deep/60"],
-            ].map(([pos, color]) => (
-              <span key={pos} className={`absolute h-12 ${pos} ${color}`} />
+              ["left-[4%] top-[18%] w-40", "bg-sage", "9s", "0s"],
+              ["left-[10%] top-[18%] mt-12 w-28", "bg-sand-deep/60", "11s", "-3s"],
+              ["left-[2%] top-[46%] w-32", "bg-moss/50", "10s", "-6s"],
+              ["right-[4%] top-[14%] w-36", "bg-clay/40", "12s", "-2s"],
+              ["right-[9%] top-[14%] mt-12 w-28", "bg-stay-hold", "9s", "-5s"],
+              ["right-[2%] top-[42%] w-40", "bg-sage-deep/60", "13s", "-8s"],
+            ].map(([pos, color, dur, delay]) => (
+              <span
+                key={pos}
+                className={`animate-drift absolute h-12 ${pos} ${color}`}
+                style={{ animationDuration: dur, animationDelay: delay }}
+              />
             ))}
           </div>
           <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(207_221_211/0.8),transparent)]" />
@@ -77,7 +81,7 @@ export default function Home() {
               Run your stays like a business, not a <span className="text-clay">group chat.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pine/75">
-              Hostayo helps small Philippine hosts fill their calendar, get paid on time and keep every unit guest-ready,
+              Hostayo helps Philippine hosts fill their calendar, get paid on time and keep every unit guest-ready,
               without the spreadsheets and screenshots.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-5">
@@ -105,7 +109,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
             <Reveal>
               <h2 className="max-w-2xl font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-5xl">
-                Built around how small stays really run.
+                Built to grow with your stays.
               </h2>
             </Reveal>
             <div className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">

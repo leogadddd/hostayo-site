@@ -7,7 +7,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
 
 const COLUMNS = [
   { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Features", "#features"]] },
-  { title: "Built for", links: [["Short-stay hosts", "#built-for"], ["1–20 units", "#built-for"], ["Teams with cleaners", "#built-for"]] },
+  { title: "Built for", links: [["Short-stay hosts", "#built-for"], ["Any number of units", "#built-for"], ["Teams with cleaners", "#built-for"]] },
   { title: "Hostayo", links: [["Live demo", DEMO_URL], ["Features", "#features"]] },
 ];
 
