@@ -40,9 +40,11 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 py-6 text-sm text-white/55 sm:flex-row sm:items-center">
           <p>© 2026 Hostayo. Made in the Philippines.</p>
-          <nav aria-label="Legal" className="flex gap-6">
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-6 gap-y-2">
             <a href={`${APP_URL}/terms`} className="transition-colors hover:text-white">Terms and Conditions</a>
             <a href={`${APP_URL}/privacy`} className="transition-colors hover:text-white">Privacy Policy</a>
+            <a href={`${APP_URL}/cookies`} className="transition-colors hover:text-white">Cookie Policy</a>
+            <a href={`${APP_URL}/refunds`} className="transition-colors hover:text-white">Refund Policy</a>
           </nav>
           <a href="#top" className="inline-flex items-center gap-2 transition-colors hover:text-white">
             Back to top <ArrowUp className="size-4" />
