@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["700", "800"], variable: "--font-montserrat", display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hostayo.casa"),
   title: "Hostayo — a calmer way to run your stays",
   description:
     "Bookings, payments, turnovers and expenses for small short-stay operators in the Philippines. Try the live demo.",

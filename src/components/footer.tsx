@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUp } from "lucide-react";
 import { Logo } from "./logo";
 
-const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "#";
+const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa";
 
 const COLUMNS = [
   { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Getting started", "#start"]] },
