@@ -74,10 +74,7 @@ export default function Home() {
           </div>
           <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(207_221_211/0.8),transparent)]" />
           <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
-            <p className="inline-flex items-center gap-2 rounded-full border border-pine/10 bg-linen/80 px-3 py-1 text-xs font-semibold text-pine">
-              <span className="size-1.5 rounded-full bg-moss" /> Launching soon · live demo open now
-            </p>
-            <h1 className="mx-auto mt-6 max-w-4xl font-display text-5xl leading-[1.03] font-extrabold tracking-tight text-pine sm:text-7xl">
+            <h1 className="mx-auto max-w-4xl font-display text-5xl leading-[1.03] font-extrabold tracking-tight text-pine sm:text-7xl">
               Run your stays like a business, not a <span className="text-clay">group chat.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pine/75">
