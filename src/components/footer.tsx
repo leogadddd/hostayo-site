@@ -3,10 +3,12 @@ import { Logo } from "./logo";
 
 const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/login?demo=1";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
+
 const COLUMNS = [
-  { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Getting started", "#start"]] },
+  { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Features", "#features"]] },
   { title: "Built for", links: [["Short-stay hosts", "#built-for"], ["1–20 units", "#built-for"], ["Teams with cleaners", "#built-for"]] },
-  { title: "Hostayo", links: [["Live demo", DEMO_URL], ["Booking platforms", "#platforms"]] },
+  { title: "Hostayo", links: [["Live demo", DEMO_URL], ["Features", "#features"]] },
 ];
 
 export function Footer() {
@@ -38,14 +40,15 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 py-6 text-sm text-white/55 sm:flex-row sm:items-center">
           <p>© 2026 Hostayo. Made in the Philippines.</p>
+          <nav aria-label="Legal" className="flex gap-6">
+            <a href={`${APP_URL}/terms`} className="transition-colors hover:text-white">Terms and Conditions</a>
+            <a href={`${APP_URL}/privacy`} className="transition-colors hover:text-white">Privacy Policy</a>
+          </nav>
           <a href="#top" className="inline-flex items-center gap-2 transition-colors hover:text-white">
             Back to top <ArrowUp className="size-4" />
           </a>
         </div>
       </div>
-      <p aria-hidden className="pointer-events-none -mb-[0.22em] translate-y-[8%] text-center font-display text-[clamp(5rem,23vw,20rem)] leading-none font-extrabold tracking-tighter text-white/[0.06] select-none">
-        Hostayo
-      </p>
     </footer>
   );
 }

@@ -8,13 +8,13 @@ const MOMENTS = [
   {
     time: "06:40",
     title: "A message comes in, and the dates are safe.",
-    body: "Someone asks about the weekend. You put the exact dates on hold for 24 hours. If another guest tries the same nights, Hostayo blocks it, even if two people book at once.",
+    body: "Someone asks about the weekend. You block the exact dates in seconds. If another guest tries the same nights, Hostayo blocks it, even if two people book at once.",
     visual: <OverlapViz />,
   },
   {
     time: "12:15",
     title: "The deposit lands. You tick it off, not chase it.",
-    body: "Record the GCash, Maya or cash payment in seconds. You and your guest see the same balance, so nobody has to ask “did you send it?”",
+    body: "Record the deposit in seconds. You and your guest see the same balance on their welcome page, so nobody has to ask “did you send it?”",
     visual: <PaymentViz />,
   },
   {

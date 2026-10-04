@@ -20,7 +20,7 @@ const T_BARS: TBar[] = [
   { unit: 0, from: 7, to: 11, tone: "booked", label: "Airbnb" },
   { unit: 2, from: 9, to: 12, tone: "booked", label: "Direct" },
   { unit: 1, from: 10, to: 14, tone: "booked", label: "Direct" },
-  { unit: 0, from: 13, to: 17, tone: "hold", label: "Hold · 24h" },
+  { unit: 0, from: 13, to: 17, tone: "hold", label: "Hold" },
   { unit: 2, from: 14, to: 21, tone: "booked", label: "Booking.com" },
   { unit: 1, from: 15, to: 19, tone: "booked", label: "Direct" },
   { unit: 0, from: 18, to: 21, tone: "booked", label: "Airbnb" },
@@ -106,12 +106,12 @@ export function OverlapViz({ className }: { className?: string }) {
             !clash && !held && "pointer-events-none opacity-0",
           )}
         >
-          {clash ? "New guest" : "New guest · hold 24h"}
+          {clash ? "New guest" : "New guest · hold dates"}
         </div>
       </div>
       <div className="mt-3 h-8">
         <p className={cn("flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-medium transition-all duration-300", step === 2 ? "bg-clay-mist text-clay-deep opacity-100" : step >= 4 ? "bg-sage text-pine-deep opacity-100" : "opacity-0")}>
-          {step === 2 ? <><ShieldAlert className="size-3.5" /> Dates already taken. Booking blocked.</> : <><Check className="size-3.5" /> Free dates held for 24 hours.</>}
+          {step === 2 ? <><ShieldAlert className="size-3.5" /> Dates already taken. Booking blocked.</> : <><Check className="size-3.5" /> Free dates held for this guest.</>}
         </p>
       </div>
     </div>
@@ -123,7 +123,7 @@ export function OverlapViz({ className }: { className?: string }) {
 const TOTAL = 7700;
 const PAY_STEPS = [
   { paid: 0, status: "On hold", note: "Waiting for deposit" },
-  { paid: 2000, status: "Confirmed", note: "₱2,000 GCash received" },
+  { paid: 2000, status: "Confirmed", note: "₱2,000 deposit recorded" },
   { paid: 7700, status: "Paid in full", note: "₱5,700 cash on arrival" },
   { paid: 7700, status: "Paid in full", note: "₱5,700 cash on arrival" },
 ];
