@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* Hostayo brand tokens, copied from hostayo-app (light theme only). */
+@theme {
+  --color-pine: #203a35;
+  --color-pine-deep: #162925;
+  --color-pine-soft: #2c4a44;
+  --color-pine-mist: #e3eae7;
+
+  --color-paper: #f6f3ed;
+  --color-cream: #efe9de;
+  --color-linen: #fbfaf7;
+
+  --color-sage: #cfddd3;
+  --color-sage-deep: #9fb8a9;
+  --color-moss: #6f927e;
+
+  --color-clay: #a64e37;
+  --color-clay-deep: #8c3f2c;
+  --color-clay-mist: #f3e4de;
+
+  --color-sand: #eee6d9;
+  --color-sand-deep: #c49a6c;
+  --color-bark: #624a32;
+
+  --color-ink: #22312d;
+  --color-card: #fffdfa;
+
+  --color-stay-booked: #b5cfbd;
+  --color-stay-booked-line: #8fb09b;
+  --color-stay-departed: #d7e1dc;
+  --color-stay-departed-line: #b3c4bb;
+  --color-stay-hold: #f1ddb9;
+  --color-stay-hold-line: #b0823f;
+  --color-stay-hold-ink: #553a1b;
+  --color-stay-blocked: #d9dbd7;
+  --color-stay-blocked-line: #a9ada8;
+  --color-stay-blocked-ink: #323835;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  @apply bg-paper font-sans text-ink antialiased;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+@keyframes shake {
+  20%, 60% {
+    transform: translateX(-6px);
+  }
+  40%, 80% {
+    transform: translateX(6px);
+  }
+}
+@keyframes swap {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}
+@keyframes float {
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: float 9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float {
+    animation: none;
+  }
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, rgb(32 58 53 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(32 58 53 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
+}
