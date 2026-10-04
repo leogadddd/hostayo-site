@@ -116,7 +116,7 @@ export default function Home() {
               {NUMBERS.map((n, i) => (
                 <Reveal key={n.label} delay={i * 80} className="bg-pine-deep p-7">
                   <p className="font-display text-6xl font-extrabold tracking-tight text-sage">
-                    <CountUp value={n.value} prefix={n.prefix} suffix={n.suffix} duration={1400} />
+                    <CountUp value={n.value} suffix={n.suffix} duration={1400} />
                   </p>
                   <p className="mt-3 font-semibold">{n.label}</p>
                   <p className="mt-1 text-sm text-white/55">{n.note}</p>
