@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   title: "Hostayo — a calmer way to run your stays",
   description:
     "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines. Try the live demo.",
+  openGraph: {
+    type: "website",
+    siteName: "Hostayo",
+    url: "/",
+    title: "Hostayo — a calmer way to run your stays",
+    description:
+      "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hostayo — a calmer way to run your stays",
+    description:
+      "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines.",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
