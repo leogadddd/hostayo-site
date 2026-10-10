@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { EarlyAccess } from "@/components/early-access";
 import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
 import { Logo } from "@/components/logo";
@@ -12,29 +13,8 @@ import { TimelineViz } from "@/components/visuals";
 
 const DEMO_URL =
   process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/login?demo=1";
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://app.hostayo.casa/";
-
-function Cta({
-  tone = "pine",
-  children,
-}: {
-  tone?: "pine" | "clay";
-  children: React.ReactNode;
-}) {
-  return (
-    <a
-      href={DEMO_URL}
-      className={`group inline-flex h-12 items-center gap-2 rounded-full px-6 font-semibold text-white transition-all hover:gap-3 ${
-        tone === "pine"
-          ? "bg-pine hover:bg-pine-soft"
-          : "bg-clay hover:bg-clay-deep"
-      }`}
-    >
-      {children}
-      <ArrowRight className="size-4" />
-    </a>
-  );
-}
+/** The request form at the foot of the page; every "Get early access" button leads here. */
+const EARLY_ACCESS = "#early-access";
 
 const BUILT_FOR = [
   "One room or a whole portfolio",
@@ -86,11 +66,14 @@ export default function Home() {
             <a href="#features" className="hidden hover:text-clay sm:block">
               Features
             </a>
+            <a href={DEMO_URL} className="hidden hover:text-clay md:block">
+              Live demo
+            </a>
             <a
-              href={DEMO_URL}
+              href={EARLY_ACCESS}
               className="inline-flex h-10 items-center rounded-full bg-pine px-5 text-white transition-colors hover:bg-pine-soft"
             >
-              Try the demo
+              Get early access
             </a>
           </nav>
         </div>
@@ -164,12 +147,18 @@ export default function Home() {
               screenshots.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-5">
-              <Cta>Try the live demo</Cta>
               <a
-                href="#day"
+                href={EARLY_ACCESS}
+                className="group inline-flex h-12 items-center gap-2 rounded-full bg-pine px-6 font-semibold text-white transition-all hover:gap-3 hover:bg-pine-soft"
+              >
+                Get early access
+                <ArrowRight className="size-4" />
+              </a>
+              <a
+                href={DEMO_URL}
                 className="font-semibold text-pine underline underline-offset-4"
               >
-                See a day with Hostayo
+                Try the live demo
               </a>
             </div>
             <div className="mt-14 text-left">
@@ -231,26 +220,7 @@ export default function Home() {
 
         <Features />
 
-        {/* Final CTA */}
-        <section className="px-4 pb-24 sm:px-6">
-          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-pine px-6 py-20 text-center">
-            <StayGrid blocks={false} />
-            <div className="relative">
-              <h2 className="mx-auto max-w-2xl font-display text-4xl leading-tight font-extrabold tracking-tight text-white sm:text-5xl">
-                See your own stays in Hostayo.
-              </h2>
-              <p className="mx-auto mt-4 max-w-md text-white/75">
-                The demo workspace is open. Explore it for as long as you like.
-              </p>
-              <div className="mt-8">
-                <Cta tone="clay">Try the live demo</Cta>
-              </div>
-              <p className="mt-12 text-xs tracking-[0.2em] text-white/50 uppercase">
-                People · Spaces · Progress
-              </p>
-            </div>
-          </div>
-        </section>
+        <EarlyAccess />
       </main>
 
       <Footer />

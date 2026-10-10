@@ -7,7 +7,7 @@ const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
 
 const COLUMNS = [
-  { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Features", "#features"], ["Live demo", DEMO_URL]] },
+  { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Features", "#features"], ["Get early access", "#early-access"], ["Live demo", DEMO_URL]] },
   { title: "Built for", links: [["Short-stay hosts", "#built-for"], ["Any number of units", "#built-for"], ["Teams with cleaners", "#built-for"]] },
   {
     title: "Contact",
@@ -37,8 +37,8 @@ export function Footer() {
           <div>
             <Logo className="h-8 brightness-0 invert" />
             <p className="mt-5 max-w-xs text-lg leading-snug text-white/75">A calmer way to run your stays.</p>
-            <a href={DEMO_URL} className="group mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-clay px-6 font-semibold text-white transition-all hover:gap-3 hover:bg-clay-deep">
-              Try the live demo <ArrowRight className="size-4" />
+            <a href="#early-access" className="group mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-clay px-6 font-semibold text-white transition-all hover:gap-3 hover:bg-clay-deep">
+              Get early access <ArrowRight className="size-4" />
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">

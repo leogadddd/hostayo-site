@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hostayo.casa"),
   title: "Hostayo — a calmer way to run your stays",
   description:
-    "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines. Try the live demo.",
+    "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines. Get early access.",
   openGraph: {
     type: "website",
     siteName: "Hostayo",
