@@ -75,6 +75,6 @@ You can also reach us on [Facebook](https://www.facebook.com/profile.php?id=6159
 
 ## License
 
-All rights reserved. No license is granted to use, copy or distribute this code.
+All rights reserved. See [LICENSE](LICENSE). No license is granted to use, copy or distribute this code.
 
 Technical notes for working on the site are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
