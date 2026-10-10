@@ -1,77 +1,80 @@
-# Hostayo site
+# Hostayo website
 
-The marketing site for [Hostayo](https://hostayo.casa), a calmer way for
-Philippine short-stay hosts to run their bookings, payments and turnovers. The
-product itself lives in [hostayo](https://github.com/leogadddd/hostayo-app)
-(app.hostayo.casa).
+**A calmer way to run your stays.**
 
-## What's here
+[hostayo.casa](https://hostayo.casa) · [Live demo](https://demo.hostayo.casa/login?demo=1) · [Request early access](https://hostayo.casa/#early-access)
 
-A single-page site: hero, a scroll-told "day with Hostayo", the story of the
-name, features, and an early-access request form. Requests are saved in the app
-and emailed to the team, and the visitor gets a confirmation email.
+## Introduction
 
-## Stack
+Hostayo is a booking and operations tool for short-stay hosts in the Philippines. It takes a booking from the first message to checkout, and shows you the work and money attached to every stay, whether you host one room or manage a whole portfolio.
 
-- Next.js (App Router), React and TypeScript
-- Tailwind CSS v4, Lenis for smooth scrolling
-- Resend for email (Gmail SMTP as a fallback)
-- Deployed on Vercel
+This repository is the website at [hostayo.casa](https://hostayo.casa), where hosts can see how Hostayo works and ask for early access. The product itself lives in [hostayo-app](https://github.com/leogadddd/hostayo-app).
 
-> This Next.js version has breaking changes from older releases. Read the guide
-> in `node_modules/next/dist/docs/` before changing framework-level code.
+## The problem
 
-## Getting started
+Most small hosts run their business out of Messenger threads, screenshots of payments, a spreadsheet for the calendar and a group chat with the cleaner. It works until it doesn't:
 
-```bash
-npm install
-cp .env.example .env     # then fill in the values below
-npm run dev              # http://localhost:3000
-```
+- Two guests ask for the same weekend and someone gets double-booked
+- Nobody remembers who paid the deposit, or how much is still owed
+- The cleaner doesn't know a unit is vacant until you tell them
+- At the end of the month you can't say what each unit really earned
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Development server |
-| `npm run build` / `start` | Production build and server |
-| `npm run typecheck` | TypeScript check |
+## The solution
 
-## Environment
+Hostayo keeps all of it in one place. Your calendar blocks overlapping bookings. Every guest gets one link with their dates, house rules and balance. Cleaning checklists appear the moment a guest checks out. And your money is laid out plainly: cash collected, deposits you're holding and expenses, each labelled.
 
-All variables are documented in [`.env.example`](./.env.example). Server-only
-values never get the `NEXT_PUBLIC_` prefix. Set the same ones in Vercel.
+## What Hostayo does
 
-| Variable | Purpose |
-| --- | --- |
-| `NEXT_PUBLIC_DEMO_URL` | Where "Try the live demo" links go |
-| `NEXT_PUBLIC_APP_URL` | App host; footer legal links point here |
-| `NEXT_PUBLIC_SUPPORT_EMAIL` | Footer "Email us" link |
-| `NEXT_PUBLIC_GA_ID` | Google Analytics, loaded only after a visitor accepts cookies |
-| `RESEND_API_KEY`, `EARLY_ACCESS_TO_EMAIL`, `EARLY_ACCESS_FROM` | Early-access emails (verify `hostayo.casa` in Resend to send from your own address) |
-| `EARLY_ACCESS_API_SECRET`, `EARLY_ACCESS_API_URL` | Saves each request in the app; must match the app's `EARLY_ACCESS_API_SECRET` |
+**Bookings and calendar**
+- One calendar for every unit, whether you host one room or a whole portfolio
+- Block dates in seconds, with overlapping bookings stopped, even when two people book at once
+- Holds, confirmations, check-in, check-out, extensions and cancellations, all from the booking itself
+- Keep track of what's in each unit and which dates are open
 
-Generate a secret with `openssl rand -base64 32`.
+**Guests**
+- A welcome page for every booking with dates, house rules, balance and check-in details
+- House rules written once per property
+- Guest records with contact details and stay history
 
-## How the early-access form works
+**Money**
+- Record deposits and payments, and see what's collected and what's still owed
+- Refunds and damage deductions with a clear paper trail
+- Expenses, recurring bills and reports that show what each unit really earns
+- Deposits you're holding are kept separate from income, so the numbers mean what they say
 
-1. The visitor submits name, email, Facebook or Instagram, number of units and
-   where bookings come from.
-2. A server action ([`src/app/early-access-action.ts`](./src/app/early-access-action.ts))
-   saves the request to the app (`POST /api/early-access`) and emails the team,
-   in parallel. The visitor only sees an error if both fail.
-3. A confirmation email goes to the visitor.
-4. The team reads requests in the app at `/early-access` (L1 operators only).
+**Operations**
+- Turnover checklists appear at checkout, and your cleaner ticks them off from their phone
+- Damage reports logged and resolved against the booking
+- See at a glance which units are guest-ready
 
-The form has a hidden honeypot field and an in-memory rate limit per visitor.
+**Your team**
+- Owner, Admin, Operations Manager and Staff roles, each seeing only what they need
+- Two-factor sign-in
+- A record of who changed what and when
 
-## Project layout
+Made in the Philippines, with Asia/Manila time and pesos throughout.
 
-```
-src/app/             page, layout, share images, server action
-src/components/      page sections and the early-access form
-src/lib/             form validation, mailer, app inbox client
-public/              brand assets and booking-platform logos
-```
+## Coming soon
+
+- **Seasonal pricing:** weekend and peak rates, discounts and minimum stays
+- **Calendar sync:** two-way iCal sync with your other booking channels
+- **Owner reports:** monthly income and profit per unit, exportable as PDF or CSV
+- **Guest messaging:** automatic confirmation and reminder messages
+
+## How to contribute
+
+Hostayo is built with hosts, so your experience shapes what comes next.
+
+- **Try it:** [request early access](https://hostayo.casa/#early-access) or look around the [live demo](https://demo.hostayo.casa/login?demo=1).
+- **Tell us what's missing:** open an [issue](https://github.com/leogadddd/hostayo-site/issues) describing how you run your stays and where it hurts. Real stories help most.
+- **Spot a problem on the site:** a typo, a broken link or something confusing? Open an issue with a screenshot.
+- **Suggest an improvement:** open an issue first so we can talk it through before anyone writes code.
+- **Spread the word:** share Hostayo with a host who still runs on spreadsheets and screenshots.
+
+You can also reach us on [Facebook](https://www.facebook.com/profile.php?id=61594931963512) or [Instagram](https://www.instagram.com/hostayo/).
 
 ## License
 
 All rights reserved. No license is granted to use, copy or distribute this code.
+
+Technical notes for working on the site are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
