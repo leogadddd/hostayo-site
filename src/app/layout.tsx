@@ -8,12 +8,15 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["700", "800"], vari
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hostayo.casa"),
+  applicationName: "Hostayo",
   title: "Hostayo — a calmer way to run your stays",
   description:
     "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines. Get early access.",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Hostayo",
+    locale: "en_PH",
     url: "/",
     title: "Hostayo — a calmer way to run your stays",
     description:
