@@ -1,4 +1,4 @@
-import { PAGES } from "@/lib/pages";
+import { APP_PAGES, PAGES } from "@/lib/pages";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -26,6 +26,9 @@ export function GET() {
     }
     lines.push("");
   }
+  lines.push("## App (app.hostayo.casa)", "");
+  for (const p of APP_PAGES) lines.push(`- [${p.title}](${p.url}): ${p.description}`);
+  lines.push("");
   lines.push("## Optional", "", "- [Sitemap](" + SITE_URL + "/sitemap.xml)", "");
   return new Response(lines.join("\n"), {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
