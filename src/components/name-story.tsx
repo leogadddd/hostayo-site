@@ -52,7 +52,7 @@ export function NameStory() {
         <div aria-hidden className="grid-fade pointer-events-none absolute inset-0" />
         <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-24 size-96 rounded-full bg-[radial-gradient(closest-side,rgb(243_228_222/0.9),transparent)]" />
 
-        <p className="relative text-sm font-semibold tracking-wide text-clay uppercase">The name</p>
+        <h2 className="relative text-sm font-semibold tracking-wide text-clay uppercase">Where does the name Hostayo come from?</h2>
 
         <p
           aria-hidden
@@ -99,7 +99,7 @@ export function NameStory() {
         <div
           aria-hidden
           className={cn(
-            "absolute bottom-8 flex flex-col items-center gap-1 text-xs font-semibold tracking-[0.2em] text-pine/50 uppercase transition-opacity duration-500",
+            "absolute bottom-8 flex flex-col items-center gap-1 text-xs font-semibold tracking-[0.2em] text-pine/70 uppercase transition-opacity duration-500",
             step < 2 ? "opacity-100" : "opacity-0",
           )}
         >

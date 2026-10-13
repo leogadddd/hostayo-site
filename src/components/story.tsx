@@ -52,9 +52,9 @@ export function Story() {
   return (
     <section id="day" className="mx-auto max-w-6xl px-4 py-28 sm:px-6">
       <div className="max-w-3xl">
-        <p className="text-sm font-semibold tracking-wide text-clay uppercase">A day with Hostayo</p>
-        <h2 className="mt-3 font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-pine sm:text-6xl">
-          Same day. A lot less to hold in your head.
+        <p className="text-sm font-semibold tracking-wide text-clay uppercase">A lot less to hold in your head</p>
+        <h2 className="mt-3 font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-pine sm:text-5xl">
+          What does a day with Hostayo look like?
         </h2>
       </div>
 
@@ -69,7 +69,7 @@ export function Story() {
               className="relative pb-20 sm:pl-12 lg:flex lg:min-h-[78vh] lg:flex-col lg:justify-center lg:pb-0"
             >
               <span aria-hidden className={cn("absolute top-2 left-0 hidden size-[11px] rounded-full border-2 transition-colors duration-300 sm:block lg:top-1/2 lg:-mt-6", active === i ? "border-clay bg-clay" : "border-pine/30 bg-paper")} />
-              <p className={cn("font-display text-5xl font-extrabold tracking-tight tabular-nums transition-colors duration-300 sm:text-6xl", active === i ? "text-clay" : "text-pine/25")}>{m.time}</p>
+              <p className={cn("font-display text-5xl font-extrabold tracking-tight tabular-nums transition-colors duration-300 sm:text-6xl", active === i ? "text-clay" : "text-pine/55")}>{m.time}</p>
               <h3 className="mt-3 font-display text-2xl leading-tight font-bold text-pine sm:text-3xl">{m.title}</h3>
               <p className="mt-4 max-w-md text-lg leading-relaxed text-pine/70">{m.body}</p>
               <div className="mt-8 lg:hidden">{m.visual}</div>

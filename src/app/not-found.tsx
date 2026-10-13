@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { StayGrid } from "@/components/stay-grid";
 
-export const metadata: Metadata = { title: "Page not found · Hostayo" };
+export const metadata: Metadata = { title: "Page not found", robots: { index: false, follow: false } };
 
 export default function NotFound() {
   return (

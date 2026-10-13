@@ -38,13 +38,13 @@ export function TimelineViz({ className }: { className?: string }) {
       <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="font-display text-sm font-bold text-pine">October</p>
-          <p className="text-xs text-pine/55">3 units · one calendar</p>
+          <p className="text-xs text-pine/70">3 units · one calendar</p>
         </div>
         <div className="text-right">
           <p className="font-display text-4xl leading-none font-extrabold tracking-tight text-pine">
             <CountUp value={pct} suffix="%" active={inView} duration={600} />
           </p>
-          <p className="mt-1 text-xs text-pine/55">of nights booked</p>
+          <p className="mt-1 text-xs text-pine/70">of nights booked</p>
         </div>
       </div>
       <div className="space-y-2">
@@ -137,18 +137,18 @@ export function PaymentViz({ className }: { className?: string }) {
       <div className="flex items-start justify-between">
         <div>
           <p className="font-display text-sm font-bold text-pine">Maria Santos</p>
-          <p className="text-xs text-pine/60">3 nights · Direct</p>
+          <p className="text-xs text-pine/75">3 nights · Direct</p>
         </div>
         <span className={cn("rounded-full px-2.5 py-1 text-[11px] font-semibold transition-colors duration-500", step === 0 ? "bg-stay-hold text-stay-hold-ink" : "bg-sage text-pine-deep")}>{s.status}</span>
       </div>
-      <p className="mt-5 text-xs text-pine/60">Balance due</p>
+      <p className="mt-5 text-xs text-pine/75">Balance due</p>
       <p className="font-display text-4xl font-extrabold tracking-tight text-pine">
         <CountUp prefix="₱" value={TOTAL - s.paid} active={inView} />
       </p>
       <div className="mt-4 h-2.5 overflow-hidden rounded-full bg-pine-mist">
         <div className="h-full origin-left rounded-full bg-moss transition-transform duration-1000 ease-out" style={{ transform: `scaleX(${s.paid / TOTAL})` }} />
       </div>
-      <div className="mt-2 flex justify-between text-[11px] text-pine/60">
+      <div className="mt-2 flex justify-between text-[11px] text-pine/75">
         <span>{s.note}</span>
         <span className="tabular-nums">of ₱7,700</span>
       </div>
@@ -179,7 +179,7 @@ export function TurnoverViz({ className }: { className?: string }) {
             <span className={cn("grid size-5 place-items-center rounded-md border transition-all duration-300", i < done ? "border-pine bg-pine text-white" : "border-pine/25 bg-card")}>
               {i < done && <Check className="size-3.5" />}
             </span>
-            <span className={cn("transition-colors duration-300", i < done ? "text-pine/45 line-through" : "text-pine")}>{t}</span>
+            <span className={cn("transition-colors duration-300", i < done ? "text-pine/70 line-through" : "text-pine")}>{t}</span>
           </li>
         ))}
       </ul>
@@ -204,15 +204,15 @@ export function ChartViz({ className }: { className?: string }) {
     <div ref={ref} className={cn(card, className)}>
       <div className="grid grid-cols-3 gap-2">
         <div>
-          <p className="text-[11px] text-pine/60">Cash collected</p>
+          <p className="text-[11px] text-pine/75">Cash collected</p>
           <p className="font-display text-xl font-extrabold text-pine"><CountUp prefix="₱" value={drawn ? 31200 : 0} duration={1600} /></p>
         </div>
         <div className="rounded-xl bg-sand px-2 py-1">
-          <p className="text-[11px] text-pine/60">Deposits held</p>
+          <p className="text-[11px] text-pine/75">Deposits held</p>
           <p className="font-display text-xl font-extrabold text-bark"><CountUp prefix="₱" value={drawn ? 3000 : 0} duration={1600} /></p>
         </div>
         <div>
-          <p className="text-[11px] text-pine/60">Expenses</p>
+          <p className="text-[11px] text-pine/75">Expenses</p>
           <p className="font-display text-xl font-extrabold text-clay"><CountUp prefix="₱" value={drawn ? 4650 : 0} duration={1600} /></p>
         </div>
       </div>
@@ -230,7 +230,7 @@ export function ChartViz({ className }: { className?: string }) {
           <circle key={i} cx={x} cy={y} r={i === xy.length - 1 ? 4.5 : 0} fill="#a64e37" className={cn("transition-opacity delay-[1600ms] duration-500", drawn ? "opacity-100" : "opacity-0")} />
         ))}
       </svg>
-      <p className="mt-1 flex items-center gap-1.5 text-[11px] text-pine/55"><Clock className="size-3" /> Deposits are held, never counted as income.</p>
+      <p className="mt-1 flex items-center gap-1.5 text-[11px] text-pine/70"><Clock className="size-3" /> Deposits are held, never counted as income.</p>
     </div>
   );
 }

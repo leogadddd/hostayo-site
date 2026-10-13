@@ -59,7 +59,7 @@ export function EarlyAccess() {
                 Try the live demo
               </a>
             </p>
-            <p className="mt-10 hidden text-xs tracking-[0.2em] text-white/50 uppercase lg:block">
+            <p className="mt-10 hidden text-xs tracking-[0.2em] text-white/70 uppercase lg:block">
               People · Spaces · Progress
             </p>
           </div>

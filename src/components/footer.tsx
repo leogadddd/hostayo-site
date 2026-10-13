@@ -7,8 +7,16 @@ const DEMO_URL = process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
 
 const COLUMNS = [
-  { title: "Explore", links: [["A day with Hostayo", "#day"], ["The name", "#name"], ["By the numbers", "#numbers"], ["Features", "#features"], ["Get early access", "#early-access"], ["Live demo", DEMO_URL]] },
-  { title: "Built for", links: [["Short-stay hosts", "#built-for"], ["Any number of units", "#built-for"], ["Teams with cleaners", "#built-for"]] },
+  { title: "Explore", links: [["A day with Hostayo", "/#day"], ["The name", "/#name"], ["Features", "/#features"], ["FAQ", "/#faq"], ["Get early access", "/#early-access"], ["Live demo", DEMO_URL]] },
+  {
+    title: "Guides",
+    links: [
+      ["Avoid double booking", "/guides/avoid-double-booking"],
+      ["Track guest deposits", "/guides/track-guest-deposits"],
+      ["Turnover checklist", "/guides/turnover-cleaning-checklist"],
+      ["Compare tools", "/compare"],
+    ],
+  },
   {
     title: "Contact",
     links: [
@@ -37,14 +45,14 @@ export function Footer() {
           <div>
             <Logo className="h-8 brightness-0 invert" />
             <p className="mt-5 max-w-xs text-lg leading-snug text-white/75">A calmer way to run your stays.</p>
-            <a href="#early-access" className="group mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-clay px-6 font-semibold text-white transition-all hover:gap-3 hover:bg-clay-deep">
+            <a href="/#early-access" className="group mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-clay px-6 font-semibold text-white transition-all hover:gap-3 hover:bg-clay-deep">
               Get early access <ArrowRight className="size-4" />
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-5">
             {COLUMNS.map((c) => (
               <nav key={c.title} aria-label={c.title}>
-                <p className="text-xs font-semibold tracking-wide text-white/45 uppercase">{c.title}</p>
+                <p className="text-xs font-semibold tracking-wide text-white/70 uppercase">{c.title}</p>
                 <ul className="mt-4 space-y-3 text-sm">
                   {c.links.map(([label, href]) => (
                     <li key={label}><a href={href} {...(href.startsWith("https://www.") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-white/80 transition-colors hover:text-white">{label}</a></li>
@@ -55,7 +63,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 py-6 text-sm text-white/55 sm:flex-row sm:items-center">
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 py-6 text-sm text-white/70 sm:flex-row sm:items-center">
           <p>© 2026 Hostayo. Made in the Philippines.</p>
           <a href="#top" className="inline-flex items-center gap-2 transition-colors hover:text-white">
             Back to top <ArrowUp className="size-4" />

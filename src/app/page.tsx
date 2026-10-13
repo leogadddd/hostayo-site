@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { EarlyAccess } from "@/components/early-access";
 import { Features } from "@/components/features";
 import { Footer } from "@/components/footer";
-import { Logo } from "@/components/logo";
+import { Faq } from "@/components/faq";
+import { JsonLd } from "@/components/json-ld";
+import { Explore } from "@/components/explore";
+import { SiteHeader } from "@/components/site-header";
 import { NameStory } from "@/components/name-story";
 import { CountUp } from "@/components/motion";
 import { Reveal } from "@/components/reveal";
@@ -10,6 +14,38 @@ import { SmoothScroll } from "@/components/smooth-scroll";
 import { StayGrid } from "@/components/stay-grid";
 import { Story } from "@/components/story";
 import { TimelineViz } from "@/components/visuals";
+import { HOME_FAQS } from "@/content/faqs";
+import { DEFAULT_DESCRIPTION, HOME_TITLE, pageMetadata, SITE_URL } from "@/lib/site";
+
+export const metadata: Metadata = pageMetadata({
+  title: HOME_TITLE,
+  description: `${DEFAULT_DESCRIPTION} Free early access.`,
+  path: "/",
+});
+
+const HOME_SCHEMA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Hostayo",
+    url: SITE_URL,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description: DEFAULT_DESCRIPTION,
+    inLanguage: "en-PH",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "PHP", description: "Free during early access" },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
 
 const DEMO_URL =
   process.env.NEXT_PUBLIC_DEMO_URL || "https://demo.hostayo.casa/login?demo=1";
@@ -56,28 +92,7 @@ export default function Home() {
     <>
       <SmoothScroll />
       <span id="top" />
-      <header className="fixed inset-x-0 top-4 z-40 px-4">
-        <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-full border border-pine/10 bg-linen/95 pr-2 pl-5 shadow-lg shadow-pine/5">
-          <Logo className="h-6" />
-          <nav className="flex items-center gap-6 text-sm font-medium text-pine">
-            <a href="#day" className="hidden hover:text-clay sm:block">
-              A day with Hostayo
-            </a>
-            <a href="#features" className="hidden hover:text-clay sm:block">
-              Features
-            </a>
-            <a href={DEMO_URL} className="hidden hover:text-clay md:block">
-              Live demo
-            </a>
-            <a
-              href={EARLY_ACCESS}
-              className="inline-flex h-10 items-center rounded-full bg-pine px-5 text-white transition-colors hover:bg-pine-soft"
-            >
-              Get early access
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         {/* Hero: centered, with one wide animated timeline */}
@@ -137,6 +152,9 @@ export default function Home() {
             className="pointer-events-none absolute -top-32 left-1/2 size-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(207_221_211/0.8),transparent)]"
           />
           <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
+            <p className="mb-5 text-sm font-semibold tracking-wide text-clay uppercase">
+              Booking management for short-stay hosts in the Philippines
+            </p>
             <h1 className="mx-auto max-w-4xl font-display text-5xl leading-[1.03] font-extrabold tracking-tight text-pine sm:text-7xl">
               Run your stays like a business, not a{" "}
               <span className="text-clay">group chat.</span>
@@ -193,7 +211,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
             <Reveal>
               <h2 className="max-w-2xl font-display text-3xl leading-tight font-extrabold tracking-tight sm:text-5xl">
-                Built to grow with your stays.
+                Will Hostayo grow with my stays?
               </h2>
             </Reveal>
             <div className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
@@ -211,7 +229,7 @@ export default function Home() {
                     />
                   </p>
                   <p className="mt-3 font-semibold">{n.label}</p>
-                  <p className="mt-1 text-sm text-white/55">{n.note}</p>
+                  <p className="mt-1 text-sm text-white/70">{n.note}</p>
                 </Reveal>
               ))}
             </div>
@@ -220,8 +238,13 @@ export default function Home() {
 
         <Features />
 
+        <Faq faqs={HOME_FAQS} />
+
+        <Explore />
+
         <EarlyAccess />
       </main>
+      <JsonLd data={HOME_SCHEMA} />
 
       <Footer />
     </>

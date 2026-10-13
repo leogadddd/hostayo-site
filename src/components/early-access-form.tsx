@@ -120,7 +120,7 @@ export function EarlyAccessForm({
         <h3 className="font-display text-2xl font-bold text-pine">
           Request your invite
         </h3>
-        <p className="mt-1 text-sm text-pine/65">
+        <p className="mt-1 text-sm text-pine/75">
           Five quick questions. No account or payment needed.
         </p>
       </div>
@@ -201,7 +201,7 @@ export function EarlyAccessForm({
         {errors.email ? (
           <FieldError id="early-access-email-error" message={errors.email} />
         ) : (
-          <p id="early-access-email-hint" className="mt-1.5 text-sm text-pine/55">
+          <p id="early-access-email-hint" className="mt-1.5 text-sm text-pine/70">
             We’ll send a confirmation here.
           </p>
         )}
@@ -234,7 +234,7 @@ export function EarlyAccessForm({
         {errors.social ? (
           <FieldError id="early-access-social-error" message={errors.social} />
         ) : (
-          <p id="early-access-social-hint" className="mt-1.5 text-sm text-pine/55">
+          <p id="early-access-social-hint" className="mt-1.5 text-sm text-pine/70">
             This is the fastest way for us to reach you.
           </p>
         )}
@@ -276,7 +276,7 @@ export function EarlyAccessForm({
           {pending ? "Sending…" : "Request early access"}
           {pending ? null : <ArrowRight className="size-4" aria-hidden />}
         </button>
-        <p className="mt-3 text-center text-xs leading-relaxed text-pine/55">
+        <p className="mt-3 text-center text-xs leading-relaxed text-pine/70">
           We’ll only use this to contact you about Hostayo.{" "}
           <a
             href={privacyUrl}

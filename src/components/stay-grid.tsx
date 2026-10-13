@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 const CELL = 48;
 
 // Filled grid cells, like stays on a calendar: [column, row, span, color].
@@ -36,11 +36,14 @@ export function StayGrid({ blocks = true }: { blocks?: boolean }) {
             style={{ left: col * CELL + 1, top: row * CELL + 1, width: span * CELL - 1, height: CELL - 1 }}
           />
         ))}
-      <img
+      <Image
         src="/brand/hostayo-mark.png"
         alt=""
         aria-hidden
-        className="pointer-events-none absolute -right-16 -bottom-16 h-96 w-96 opacity-5 brightness-0 invert"
+        width={361}
+        height={445}
+        sizes="384px"
+        className="pointer-events-none absolute -right-16 -bottom-16 h-96 w-96 object-contain opacity-5 brightness-0 invert"
       />
     </>
   );

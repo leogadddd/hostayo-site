@@ -5,6 +5,7 @@ const GROUPS = [
   {
     icon: CalendarDays,
     title: "Bookings & calendar",
+    question: "How do I manage bookings and my calendar?",
     blurb: "Know who’s arriving, staying and leaving, at a glance.",
     items: [
       ["One calendar for every unit", "All your properties and units on a single view. Overlapping bookings are blocked."],
@@ -15,6 +16,7 @@ const GROUPS = [
   {
     icon: FileText,
     title: "Guests",
+    question: "How do I keep guests informed?",
     blurb: "A better stay starts with one clear page.",
     items: [
       ["A welcome page for every guest", "Each booking gets its own link with the dates, house rules, balance and check-in details."],
@@ -25,6 +27,7 @@ const GROUPS = [
   {
     icon: BarChart3,
     title: "Money",
+    question: "How do I track deposits, balances and expenses?",
     blurb: "See what came in, what’s owed and what went out.",
     items: [
       ["Deposits & balances", "Record payments by hand and see what’s collected and what’s still owed."],
@@ -35,6 +38,7 @@ const GROUPS = [
   {
     icon: ClipboardCheck,
     title: "Operations",
+    question: "How do I keep every turnover on track?",
     blurb: "Every turnover handled, nothing left to memory.",
     items: [
       ["Turnover checklists", "The cleaning list appears at checkout, and your team ticks it off from their phone."],
@@ -45,6 +49,7 @@ const GROUPS = [
   {
     icon: KeyRound,
     title: "Team & security",
+    question: "Who sees what, and how is it protected?",
     blurb: "The right access for everyone, and a record of it.",
     items: [
       ["Roles & permissions", "Owner, Admin, Operations Manager and Staff each see only what they need."],
@@ -66,8 +71,8 @@ export function Features() {
     <section id="features" className="mx-auto max-w-6xl px-4 py-28 sm:px-6">
       <Reveal className="max-w-3xl">
         <p className="text-sm font-semibold tracking-wide text-clay uppercase">Features</p>
-        <h2 className="mt-3 font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-pine sm:text-6xl">
-          Everything a stay needs, from first message to final checkout.
+        <h2 className="mt-3 font-display text-4xl leading-[1.08] font-extrabold tracking-tight text-pine sm:text-5xl">
+          What can I do with Hostayo, from first message to final checkout?
         </h2>
       </Reveal>
 
@@ -78,8 +83,9 @@ export function Features() {
               <span className="grid size-12 place-items-center rounded-2xl bg-sage text-pine">
                 <g.icon className="size-6" />
               </span>
-              <h3 className="mt-5 font-display text-2xl font-bold text-pine">{g.title}</h3>
-              <p className="mt-2 max-w-xs text-pine/65">{g.blurb}</p>
+              <p className="mt-5 text-sm font-semibold tracking-wide text-clay uppercase">{g.title}</p>
+              <h3 className="mt-1 font-display text-2xl font-bold text-pine">{g.question}</h3>
+              <p className="mt-2 max-w-xs text-pine/75">{g.blurb}</p>
             </div>
             <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
               {g.items.map(([title, body]) => (
@@ -87,7 +93,7 @@ export function Features() {
                   <Check className="mt-1 size-5 shrink-0 text-moss" />
                   <div>
                     <p className="font-semibold text-pine">{title}</p>
-                    <p className="mt-1 leading-relaxed text-pine/65">{body}</p>
+                    <p className="mt-1 leading-relaxed text-pine/75">{body}</p>
                   </div>
                 </li>
               ))}
@@ -98,7 +104,7 @@ export function Features() {
 
       <Reveal className="mt-16 rounded-[2rem] bg-sand/70 p-8 sm:p-12">
         <div className="flex flex-wrap items-center gap-3">
-          <h3 className="font-display text-2xl font-bold text-pine">On the way</h3>
+          <h3 className="font-display text-2xl font-bold text-pine">What is coming next?</h3>
           <span className="rounded-full bg-clay px-3 py-1 text-xs font-semibold text-white">Coming soon</span>
         </div>
         <ul className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -106,7 +112,7 @@ export function Features() {
             <li key={title}>
               <Icon className="size-6 text-bark" />
               <p className="mt-4 font-semibold text-pine">{title}</p>
-              <p className="mt-1 leading-relaxed text-pine/65">{body}</p>
+              <p className="mt-1 leading-relaxed text-pine/75">{body}</p>
             </li>
           ))}
         </ul>
