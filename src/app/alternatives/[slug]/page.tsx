@@ -44,7 +44,17 @@ export default async function AlternativesPage({ params }: Props) {
       <Answer>{a.answer}</Answer>
       <p className="mt-4 text-sm text-pine/70">Reviewed {COMPARISON_REVIEWED}. Check each vendor’s site for current features and prices.</p>
 
-      <H2>Which {a.name} alternative fits which host?</H2>
+      <H2>Why do hosts choose Hostayo over {a.name}?</H2>
+      <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+        {a.advantages.map((x) => (
+          <li key={x.title} className="rounded-2xl border border-pine/10 bg-card p-5">
+            <h3 className="font-display text-lg font-bold text-pine">{x.title}</h3>
+            <p className="mt-2 leading-relaxed text-pine/80">{x.body}</p>
+          </li>
+        ))}
+      </ul>
+
+      <H2>How do the {a.name} alternatives compare?</H2>
       <ol className="mt-6 space-y-4">
         {a.options.map((o) => (
           <li key={o.name} className="rounded-2xl border border-pine/10 bg-card p-5">
@@ -58,13 +68,6 @@ export default async function AlternativesPage({ params }: Props) {
             ) : null}
           </li>
         ))}
-      </ol>
-
-      <H2>How do I pick one?</H2>
-      <ol className="mt-4 list-decimal space-y-2 pl-5 text-pine/80">
-        <li>Where do your bookings come from: channels, a website or Messenger?</li>
-        <li>Do you need two-way sync today, or only a tidy back office?</li>
-        <li>How many units and team members will use it?</li>
       </ol>
 
       <Cta />

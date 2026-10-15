@@ -16,9 +16,9 @@ export const PAGES: PageEntry[] = [
     description: "What Hostayo does, a day with Hostayo, features, FAQ and early access.",
     section: "Main",
   },
-  { path: "/guides", title: "Guides for short-stay hosts", description: "Short, practical guides for hosts.", section: "Guides" },
+  { path: "/guides", title: "Guides for staycation hosts", description: "Short, practical guides for hosts.", section: "Guides" },
   ...GUIDES.map((g) => ({ path: `/guides/${g.slug}`, title: g.title, description: g.description, section: "Guides" as const })),
-  { path: "/compare", title: "Compare Hostayo with other tools", description: "Index of comparison and alternatives pages.", section: "Compare" },
+  { path: "/compare", title: "Why choose Hostayo over other tools", description: "Index of comparison and alternatives pages.", section: "Compare" },
   ...VS.map((v) => ({ path: `/vs/${v.slug}`, title: v.title, description: v.description, section: "Compare" as const })),
   ...ALTERNATIVES.map((a) => ({ path: `/alternatives/${a.slug}`, title: a.title, description: a.description, section: "Compare" as const })),
 ];

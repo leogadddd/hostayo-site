@@ -1,7 +1,9 @@
 /**
- * Competitor comparisons. Keep claims to what is widely documented and say
- * "check their site" for anything that changes (pricing, plans, integrations).
- * Hostayo's own gaps are stated plainly: no OTA sync yet, no online payments.
+ * Competitor comparisons. These pages lead with what Hostayo does better as a
+ * management app for one host's staycation. Keep claims about other tools to
+ * what is widely documented and say "check their site" for anything that
+ * changes (pricing, plans, integrations). Never claim a competitor lacks a
+ * feature we have not verified; describe who they are built for instead.
  */
 
 export const COMPARISON_REVIEWED = "October 2026";
@@ -23,8 +25,10 @@ export interface Vs {
   answer: string;
   otherSummary: string;
   rows: Row[];
+  /** Where Hostayo comes out ahead, led with on the page. */
+  advantages: { title: string; body: string }[];
+  /** Short, honest note on when the other tool fits better. */
   chooseOther: string[];
-  chooseHostayo: string[];
   faqs: { q: string; a: string }[];
 }
 
@@ -32,24 +36,51 @@ export const VS: Vs[] = [
   {
     slug: "spreadsheets-and-messenger",
     name: "spreadsheets and Messenger",
-    title: "Hostayo vs spreadsheets and Messenger for short-stay hosts",
+    title: "Hostayo vs spreadsheets and Messenger for staycation hosts",
     description:
-      "Run your short-stay on a spreadsheet and Messenger threads, or on one calendar? See where each breaks down, and when a spreadsheet is still enough.",
-    h1: "Is a spreadsheet enough to run a short-stay in the Philippines?",
+      "Why staycation hosts move from spreadsheets and Messenger threads to one management app for the calendar, guests, deposits, cleaning and expenses.",
+    h1: "Why run your staycation on Hostayo instead of a spreadsheet?",
     answer:
-      "For one unit and a few bookings a month, yes. A spreadsheet and Messenger work until two guests ask for the same weekend, or until you cannot say who paid the deposit. Hostayo replaces the spreadsheet once those moments start costing you money.",
+      "A spreadsheet only holds dates. Hostayo manages the whole stay: the calendar, a welcome page for each guest, deposits and balances, turnover cleaning and expenses. Everything is in one place, so you stop piecing it together from chat threads and screenshots.",
     otherSummary:
       "A shared spreadsheet for dates, screenshots for payments, and a group chat with the cleaner. It is free and familiar, and it relies on your memory.",
+    advantages: [
+      {
+        title: "One place for the whole stay",
+        body: "Dates, guest, payments, house rules and cleaning live on the booking, not across four apps.",
+      },
+      {
+        title: "Clashes show up before you say yes",
+        body: "Dates already taken in Hostayo can’t be booked again, even when two people book at once. A sheet can’t stop you typing over a row.",
+      },
+      {
+        title: "Everyone sees the same balance",
+        body: "Record each payment once. Your guest sees what’s paid and what’s due on their welcome page, so the “nasend ko na po” chase disappears.",
+      },
+      {
+        title: "Your cleaner knows without being told",
+        body: "A checklist appears at checkout and gets ticked off from a phone, so you see Ready before the next arrival.",
+      },
+      {
+        title: "Numbers that mean what they say",
+        body: "Cash collected, deposits you’re holding and expenses are separate lines per unit, with no formulas to build or break.",
+      },
+    ],
     rows: [
       {
-        label: "Double bookings",
-        hostayo: "Overlapping bookings are blocked, even when two people book at once.",
+        label: "Calendar",
+        hostayo: "One calendar for your staycation. Overlapping bookings entered in Hostayo are blocked, even when two people book at once.",
         other: "You check by eye. Two chats at the same time can both get a yes.",
       },
       {
         label: "Deposits and balances",
         hostayo: "Each payment is recorded on the booking. Guest and host see the same balance.",
         other: "Payment proof lives in chat screenshots. Balances are your own arithmetic.",
+      },
+      {
+        label: "Guest information",
+        hostayo: "A welcome page per booking with dates, house rules, balance and check-in details.",
+        other: "You retype the same details into a message each time.",
       },
       {
         label: "Cleaning handoff",
@@ -68,24 +99,17 @@ export const VS: Vs[] = [
       },
       {
         label: "Cost",
-        hostayo: "Free during early access.",
+        hostayo: "Free.",
         other: "Free.",
       },
     ],
     chooseOther: [
-      "You host one unit and rarely have overlapping inquiries.",
-      "You are the only person who touches bookings.",
-      "Your sheet already works and you trust it.",
-    ],
-    chooseHostayo: [
-      "You have two or more units, or a cleaner or caretaker on your team.",
-      "You have been double-booked, or nearly were.",
-      "You collect deposits and lose track of who owes what.",
+      "You host one unit, take a few bookings a month and are the only person who touches them.",
     ],
     faqs: [
       {
         q: "Can I import my spreadsheet into Hostayo?",
-        a: "There is no import yet. Most hosts add their upcoming bookings by hand when they start, and we help with the first units during early access.",
+        a: "There is no import yet. Most hosts add their upcoming bookings by hand when they start, and we help with the first units.",
       },
       {
         q: "Do I have to stop using Messenger?",
@@ -96,29 +120,61 @@ export const VS: Vs[] = [
   {
     slug: "hostaway",
     name: "Hostaway",
-    title: "Hostayo vs Hostaway for Philippine short-stay hosts",
+    title: "Hostayo vs Hostaway for staycation hosts in the Philippines",
     description:
-      "Hostaway is a channel manager for professional rental managers. Hostayo is a simpler tool for direct-booking hosts in the Philippines. Compare what each is built for.",
-    h1: "Hostayo vs Hostaway: which fits a small Philippine host?",
+      "Why a staycation host may prefer Hostayo over Hostaway: simpler to run, peso and Manila time by default, deposits and cleaning built in, and free.",
+    h1: "Hostayo vs Hostaway: why Hostayo suits a staycation host better",
     answer:
-      "Hostaway is a full vacation rental platform with channel management, built for professional managers. Hostayo is smaller on purpose: it is for hosts who take direct bookings and want deposits, cleaning and expenses in one calm place. If you need two-way sync with Airbnb and Booking.com today, Hostaway is the stronger fit.",
+      "Hostaway is built for professional managers running many listings across channels. Hostayo is built for one host running their own staycation: pesos and Manila time by default, deposits and balances guests can see, turnover cleaning, and expenses, with no sales call and no setup project.",
     otherSummary:
       "Hostaway is vacation rental software that connects listing channels, automates guest messaging and manages operations, aimed at property managers with larger portfolios.",
+    advantages: [
+      {
+        title: "Made for your scale",
+        body: "You get the tools a single host uses every day, without the layers a professional manager needs.",
+      },
+      {
+        title: "Start in an afternoon",
+        body: "Add your units, your house rules and your upcoming bookings, then share the first welcome page. No sales call.",
+      },
+      {
+        title: "Deposits you can explain",
+        body: "Security deposits are tracked as money you hold, apart from income, with refunds and damage deductions on the record.",
+      },
+      {
+        title: "Built for Messenger bookings",
+        body: "The workflow starts where many Philippine bookings start: a message, a hold and a deposit.",
+      },
+      {
+        title: "Pesos and Asia/Manila time throughout",
+        body: "Amounts, dates and check-in times follow the Philippines by default.",
+      },
+    ],
     rows: [
       {
         label: "Built for",
-        hostayo: "Small Philippine hosts, from one room to a portfolio.",
+        hostayo: "One host running their own staycation, from one room to a few units.",
         other: "Professional vacation rental managers.",
       },
       {
-        label: "Airbnb and Booking.com sync",
-        hostayo: "Not yet. iCal calendar sync is planned.",
-        other: "Yes. Channel management is a core feature.",
+        label: "Getting started",
+        hostayo: "Sign up, add your units and go. Free setup help.",
+        other: "A larger platform with more to configure. See their site.",
       },
       {
         label: "Bookings that start in Messenger",
         hostayo: "The workflow is built around them.",
         other: "Designed mainly around channel and website bookings.",
+      },
+      {
+        label: "Deposits, balances and refunds",
+        hostayo: "Recorded on each booking and shared with the guest. Held deposits are kept apart from income.",
+        other: "See their site for current payment features.",
+      },
+      {
+        label: "Turnover cleaning",
+        hostayo: "A checklist appears at checkout and your cleaner ticks it off from a phone.",
+        other: "Task tools are available. See their site for plan details.",
       },
       {
         label: "Pesos and Asia/Manila time",
@@ -127,52 +183,68 @@ export const VS: Vs[] = [
       },
       {
         label: "Pricing",
-        hostayo: "Free during early access.",
+        hostayo: "Free.",
         other: "Paid, priced for professional operators. See their site.",
       },
     ],
     chooseOther: [
-      "Most of your bookings come from Airbnb, Booking.com or Vrbo.",
-      "You need automated two-way sync and guest messaging now.",
+      "Most of your bookings come from Airbnb, Booking.com or Vrbo and you need automated two-way sync today.",
       "You manage a larger portfolio for other owners.",
-    ],
-    chooseHostayo: [
-      "Your bookings start in Messenger, Facebook or word of mouth.",
-      "You want deposits, balances and cleaning in one place.",
-      "You want a lighter tool without a sales call.",
     ],
     faqs: [
       {
         q: "Can I use Hostayo and Hostaway together?",
-        a: "They overlap, so most hosts pick one. Until Hostayo adds calendar sync, you would keep the two calendars in step by hand.",
+        a: "They overlap, so most hosts pick one. Hostayo plans iCal import and export; until then you would keep the two calendars in step by hand.",
       },
     ],
   },
   {
     slug: "guesty",
     name: "Guesty",
-    title: "Hostayo vs Guesty for Philippine short-stay hosts",
+    title: "Hostayo vs Guesty for staycation hosts in the Philippines",
     description:
-      "Guesty is a property management platform for professional short-term rental managers. See how it compares with Hostayo for small direct-booking hosts in the Philippines.",
-    h1: "Hostayo vs Guesty: is Guesty too much for a small host?",
+      "Why a staycation host may prefer Hostayo over Guesty: a lighter management app with calendar, guests, deposits, cleaning and expenses, free.",
+    h1: "Hostayo vs Guesty: why Hostayo fits a staycation host",
     answer:
-      "Guesty is a full property management platform for professional managers, with channel management and automation. For a small host taking direct bookings it can be more than you need. Hostayo covers the daily work (calendar, deposits, cleaning, expenses) without the channel layer.",
+      "Guesty is a platform for professional managers with channel distribution, automation and owner tools. Hostayo does the daily work of one host’s staycation (calendar, guests, deposits, cleaning, expenses) in a calmer app you can learn in an afternoon.",
     otherSummary:
       "Guesty is property management software for short-term rental professionals, with channel distribution, automation, messaging and owner tools.",
+    advantages: [
+      {
+        title: "Everything you use, nothing you don’t",
+        body: "Calendar, welcome pages, balances, turnover and expenses, without owner statements, accounting integrations or channel layers to wade through.",
+      },
+      {
+        title: "A welcome page for every guest",
+        body: "Dates, house rules, balance and check-in details in one link your guest can open without an account.",
+      },
+      {
+        title: "Turnover that runs itself",
+        body: "Checklists appear automatically at checkout, and damage reports are logged against the booking.",
+      },
+      {
+        title: "Clear money",
+        body: "Collected cash, held deposits and expenses are separate and labelled, per unit.",
+      },
+      {
+        title: "No onboarding project",
+        body: "Add your units and go. Free, with help setting up your first units.",
+      },
+    ],
     rows: [
       {
         label: "Built for",
-        hostayo: "Small Philippine hosts and their teams.",
+        hostayo: "One host running their own staycation.",
         other: "Professional short-term rental managers and larger portfolios.",
       },
       {
-        label: "Airbnb and Booking.com sync",
-        hostayo: "Not yet. iCal calendar sync is planned.",
-        other: "Yes. Channel distribution is a core feature.",
+        label: "Getting started",
+        hostayo: "An afternoon, on your own.",
+        other: "A larger platform that typically involves onboarding. See their site.",
       },
       {
         label: "Deposits and balances",
-        hostayo: "Recorded by hand against each booking, visible to the guest.",
+        hostayo: "Recorded against each booking and visible to the guest. Held deposits are kept apart from income.",
         other: "Payments and invoicing are part of the platform. See their site for details.",
       },
       {
@@ -181,20 +253,19 @@ export const VS: Vs[] = [
         other: "Task and operations tools are available. See their site for plan details.",
       },
       {
+        label: "Pesos and Asia/Manila time",
+        hostayo: "Throughout.",
+        other: "Check their site for currency and region support.",
+      },
+      {
         label: "Pricing",
-        hostayo: "Free during early access.",
+        hostayo: "Free.",
         other: "Paid, aimed at professional operators. See their site.",
       },
     ],
     chooseOther: [
-      "You run a larger portfolio, or manage properties for other owners.",
-      "You depend on channel sync and automated messaging.",
-      "You need owner statements and accounting integrations.",
-    ],
-    chooseHostayo: [
-      "You take most bookings directly.",
-      "You want to start in an afternoon, not after onboarding.",
-      "You mainly need the calendar, balances and cleaning under control.",
+      "You run a larger portfolio or manage properties for other owners.",
+      "You need owner statements, accounting integrations or automated channel messaging now.",
     ],
     faqs: [
       {
@@ -206,29 +277,46 @@ export const VS: Vs[] = [
   {
     slug: "lodgify",
     name: "Lodgify",
-    title: "Hostayo vs Lodgify for Philippine short-stay hosts",
+    title: "Hostayo vs Lodgify for staycation hosts in the Philippines",
     description:
-      "Lodgify combines a booking website, channel manager and payments for vacation rentals. Compare it with Hostayo, built for direct-booking hosts in the Philippines.",
-    h1: "Hostayo vs Lodgify: do you need a booking website or a back office?",
+      "Lodgify builds booking websites. Hostayo manages the stay itself: calendar, guests, deposits, cleaning and expenses. See why staycation hosts pick a management app.",
+    h1: "Hostayo vs Lodgify: manage the stay, not just the booking page",
     answer:
-      "Lodgify helps you build a booking website and connect channels. Hostayo does not build websites or take online payments. It is the back office: calendar, deposits, cleaning and expenses. Pick Lodgify if you want guests to book and pay on your own site.",
+      "Lodgify helps you build a booking website. Hostayo manages everything that happens once a guest says yes: the calendar, the guest’s welcome page, deposits and balances, turnover cleaning and expenses. For hosts who take bookings in Messenger, that is the part that costs time.",
     otherSummary:
       "Lodgify is vacation rental software that bundles a website builder, a booking engine, a channel manager and online payments for small and mid-size owners.",
+    advantages: [
+      {
+        title: "Covers the work after the booking",
+        body: "Check-in, check-out, extensions, cancellations, turnover and damage reports all live on the booking.",
+      },
+      {
+        title: "Fits how you actually book",
+        body: "A message, a hold, a deposit. No website to build or maintain first.",
+      },
+      {
+        title: "Expenses and income per unit",
+        body: "Track bills, recurring costs and what each unit really earned, in pesos.",
+      },
+      {
+        title: "Deposit and refund paper trail",
+        body: "Security deposits, refunds and damage deductions are recorded against the stay.",
+      },
+      {
+        title: "Free",
+        body: "No monthly plan to pick before you know it fits.",
+      },
+    ],
     rows: [
       {
         label: "Core idea",
-        hostayo: "A back office for stays you already book.",
+        hostayo: "A management app for the whole stay, from first message to checkout.",
         other: "A website and booking engine, plus channel management.",
       },
       {
-        label: "Guests book online",
-        hostayo: "No. You record bookings after the guest messages you.",
-        other: "Yes, through a booking website or widget.",
-      },
-      {
-        label: "Airbnb and Booking.com sync",
-        hostayo: "Not yet. iCal calendar sync is planned.",
-        other: "Yes, through its channel manager.",
+        label: "After the booking",
+        hostayo: "Welcome page, balances, check-in and check-out, turnover checklist and damage reports.",
+        other: "See their site for current operations features.",
       },
       {
         label: "Turnover and expenses",
@@ -236,19 +324,24 @@ export const VS: Vs[] = [
         other: "Not the main focus. See their site for current features.",
       },
       {
+        label: "Pesos and Asia/Manila time",
+        hostayo: "Throughout.",
+        other: "Check their site for currency and region support.",
+      },
+      {
+        label: "Guests book online",
+        hostayo: "No. You record the booking after the guest messages you.",
+        other: "Yes, through a booking website or widget.",
+      },
+      {
         label: "Pricing",
-        hostayo: "Free during early access.",
+        hostayo: "Free.",
         other: "Paid monthly plans. See their site.",
       },
     ],
     chooseOther: [
       "You want guests to book and pay on a website you own.",
       "You want one tool for your site and your listing channels.",
-    ],
-    chooseHostayo: [
-      "You are happy taking bookings in Messenger.",
-      "You want help with deposits, cleaning and expenses.",
-      "You want peso amounts and Manila time by default.",
     ],
     faqs: [
       {
@@ -266,24 +359,46 @@ export interface Alternatives {
   description: string;
   h1: string;
   answer: string;
+  /** Why hosts leaving this tool land on Hostayo. */
+  advantages: { title: string; body: string }[];
   options: { name: string; fit: string; note: string; href?: string }[];
 }
+
+const SWITCH_ADVANTAGES = [
+  {
+    title: "Made for one host’s staycation",
+    body: "Calendar, guests, deposits, cleaning and expenses without the layers professional managers need.",
+  },
+  {
+    title: "Quick to learn",
+    body: "Add your units and go. Your cleaner ticks checklists off from a phone.",
+  },
+  {
+    title: "Money that makes sense",
+    body: "Collected cash, held deposits and expenses are separate and labelled, in pesos.",
+  },
+  {
+    title: "Free",
+    body: "No plan to choose before you know it fits.",
+  },
+];
 
 export const ALTERNATIVES: Alternatives[] = [
   {
     slug: "hostaway",
     name: "Hostaway",
-    title: "Hostaway alternatives for small hosts in the Philippines",
+    title: "Hostaway alternative for staycation hosts in the Philippines",
     description:
-      "Looking for a Hostaway alternative that is lighter and fits direct bookings? Compare Hostayo, Lodgify and a spreadsheet, and when each makes sense.",
-    h1: "What are good Hostaway alternatives for a small host?",
+      "Looking for a Hostaway alternative that is simpler and made for one host? See why staycation hosts choose Hostayo, and how Lodgify, Guesty and a spreadsheet compare.",
+    h1: "Why Hostayo is a good Hostaway alternative for a staycation host",
     answer:
-      "It depends on why you are looking. If Hostaway is too big, a lighter back office like Hostayo fits. If you need channel sync at a lower price, look at tools aimed at small owners. If you have one unit, a spreadsheet may be enough.",
+      "If Hostaway is more than you need, Hostayo is a lighter management app for one host: calendar, guests, deposits, turnover cleaning and expenses, with pesos and Manila time by default.",
+    advantages: SWITCH_ADVANTAGES,
     options: [
       {
         name: "Hostayo",
-        fit: "Direct-booking hosts in the Philippines.",
-        note: "Calendar, deposits, cleaning and expenses. No channel sync yet.",
+        fit: "Staycation hosts in the Philippines who want the whole stay managed in one app.",
+        note: "Calendar, guest welcome pages, deposits, cleaning and expenses. Free.",
         href: "/vs/hostaway",
       },
       {
@@ -309,17 +424,18 @@ export const ALTERNATIVES: Alternatives[] = [
   {
     slug: "guesty",
     name: "Guesty",
-    title: "Guesty alternatives for small hosts in the Philippines",
+    title: "Guesty alternative for staycation hosts in the Philippines",
     description:
-      "Guesty too large for your stays? See lighter Guesty alternatives for small hosts, including Hostayo, Lodgify and a spreadsheet, and who each one suits.",
-    h1: "What are good Guesty alternatives for a small host?",
+      "Guesty too large for your staycation? See why hosts choose Hostayo, a lighter management app, and how Lodgify, Hostaway and a spreadsheet compare.",
+    h1: "Why Hostayo is a good Guesty alternative for a staycation host",
     answer:
-      "Guesty is built for professional managers. For a small host, a lighter tool is usually enough. Choose by how your guests book: through channels, through your own website, or through Messenger.",
+      "Guesty is built for professional managers. Hostayo is built for the host who runs their own place, with the daily work in one calm app and nothing to onboard.",
+    advantages: SWITCH_ADVANTAGES,
     options: [
       {
         name: "Hostayo",
-        fit: "Guests who book through Messenger and Facebook.",
-        note: "Back office only. No channel sync or online payments yet.",
+        fit: "Staycation hosts whose guests book through Messenger and Facebook.",
+        note: "A management app for the whole stay. Free.",
         href: "/vs/guesty",
       },
       {
@@ -337,7 +453,7 @@ export const ALTERNATIVES: Alternatives[] = [
       {
         name: "A spreadsheet and Messenger",
         fit: "One unit and a handful of bookings a month.",
-        note: "Free. Breaks at the first double booking.",
+        note: "Free, but dates, payments and cleaning stay scattered.",
         href: "/vs/spreadsheets-and-messenger",
       },
     ],
@@ -345,17 +461,18 @@ export const ALTERNATIVES: Alternatives[] = [
   {
     slug: "lodgify",
     name: "Lodgify",
-    title: "Lodgify alternatives for direct-booking hosts",
+    title: "Lodgify alternative for staycation hosts in the Philippines",
     description:
-      "Do you really need a booking website? Compare Lodgify alternatives for hosts who take bookings in Messenger: Hostayo, Hostaway, Guesty and a spreadsheet.",
-    h1: "What are good Lodgify alternatives for a Messenger-based host?",
+      "Do you need a booking website, or help managing the stay? See why staycation hosts choose Hostayo over Lodgify, and how Hostaway, Guesty and a spreadsheet compare.",
+    h1: "Why Hostayo is a good Lodgify alternative for a staycation host",
     answer:
-      "Lodgify is strong when guests book and pay on your own website. If your bookings start in Messenger and you mostly need to keep dates, deposits and cleaning straight, a back-office tool fits better.",
+      "Lodgify is strong when guests book and pay on your own website. If your bookings start in Messenger, the work is after the booking, and Hostayo manages that: dates, deposits, guest pages, cleaning and expenses.",
+    advantages: SWITCH_ADVANTAGES,
     options: [
       {
         name: "Hostayo",
-        fit: "Hosts who take bookings in Messenger and Facebook.",
-        note: "Calendar, deposits, cleaning and expenses. No website builder.",
+        fit: "Hosts who take bookings in Messenger and Facebook and want the stay managed.",
+        note: "Calendar, deposits, cleaning and expenses. Free.",
         href: "/vs/lodgify",
       },
       {

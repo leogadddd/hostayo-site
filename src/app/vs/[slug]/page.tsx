@@ -51,8 +51,15 @@ export default async function VsPage({ params }: Props) {
       <Answer>{v.answer}</Answer>
       <p className="mt-4 text-sm text-pine/70">Reviewed {COMPARISON_REVIEWED}. Features and prices change, so check each vendor’s site.</p>
 
-      <H2>What is {v.name}?</H2>
-      <p className="mt-4 leading-relaxed text-pine/80">{v.otherSummary}</p>
+      <H2>Why choose Hostayo over {v.name}?</H2>
+      <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+        {v.advantages.map((a) => (
+          <li key={a.title} className="rounded-2xl border border-pine/10 bg-card p-5">
+            <h3 className="font-display text-lg font-bold text-pine">{a.title}</h3>
+            <p className="mt-2 leading-relaxed text-pine/80">{a.body}</p>
+          </li>
+        ))}
+      </ul>
 
       <H2>How do Hostayo and {v.name} compare?</H2>
       <div className="mt-6 overflow-x-auto rounded-2xl border border-pine/10 bg-card">
@@ -61,30 +68,28 @@ export default async function VsPage({ params }: Props) {
           <thead className="bg-pine-mist text-pine">
             <tr>
               <th scope="col" className="p-4 font-semibold"><span className="sr-only">Feature</span></th>
-              <th scope="col" className="p-4 font-semibold">Hostayo</th>
-              <th scope="col" className="p-4 font-semibold">{v.name}</th>
+              <th scope="col" className="bg-pine p-4 text-base font-bold text-white">Hostayo</th>
+              <th scope="col" className="p-4 font-semibold text-pine/70">{v.name}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-pine/10 align-top">
             {v.rows.map((r) => (
               <tr key={r.label}>
                 <th scope="row" className="p-4 font-semibold text-pine">{r.label}</th>
-                <td className="p-4 text-pine/80">{r.hostayo}</td>
-                <td className="p-4 text-pine/80">{r.other}</td>
+                <td className="bg-pine-mist/70 p-4 font-semibold text-pine">{r.hostayo}</td>
+                <td className="p-4 text-pine/65">{r.other}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <H2>When should I choose {v.name}?</H2>
+      <H2>What is {v.name}?</H2>
+      <p className="mt-4 leading-relaxed text-pine/80">{v.otherSummary}</p>
+
+      <H2>When might {v.name} fit better?</H2>
       <ul className="mt-4 list-disc space-y-2 pl-5 text-pine/80">
         {v.chooseOther.map((t) => <li key={t}>{t}</li>)}
-      </ul>
-
-      <H2>When should I choose Hostayo?</H2>
-      <ul className="mt-4 list-disc space-y-2 pl-5 text-pine/80">
-        {v.chooseHostayo.map((t) => <li key={t}>{t}</li>)}
       </ul>
 
       {v.faqs.map((f) => (
