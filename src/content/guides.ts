@@ -13,12 +13,12 @@ export interface Guide {
 export const GUIDES: Guide[] = [
   {
     slug: "avoid-double-booking",
-    title: "How to avoid double booking your short-stay unit",
+    title: "How to avoid double booking your staycation unit",
     description:
-      "Two guests asked for the same weekend? Here is how short-stay hosts in the Philippines avoid double bookings, from a single calendar to blocking dates fast.",
+      "Two guests asked for the same weekend? How staycation hosts in the Philippines reduce double bookings with one calendar, fast blocking and a final check.",
     h1: "How do I avoid double booking my short-stay unit?",
     answer:
-      "Keep one calendar that every booking goes into, and block the dates the moment someone says yes. Double bookings happen when dates live in more than one place: a spreadsheet, a chat thread and your memory.",
+      "You can reduce double bookings a lot, but not guarantee zero. Keep one calendar that every booking goes into, block the dates the moment someone says yes, and re-check your other channels before you confirm.",
     sections: [
       {
         h2: "Why do double bookings happen?",
@@ -42,13 +42,13 @@ export const GUIDES: Guide[] = [
       {
         h2: "What if two guests ask at the same time?",
         body: [
-          "Reply to the first message first, and block the dates before you answer the second. Software helps here: Hostayo refuses a second booking on dates that are already taken, even when two people book at once.",
+          "Reply to the first message first, and block the dates before you answer the second. Software helps here: Hostayo refuses a second booking on dates that are already taken in it, even when two people book at once.",
         ],
       },
       {
-        h2: "Does an Airbnb calendar sync fix it?",
+        h2: "Does calendar sync fix it completely?",
         body: [
-          "Sync helps if most bookings come from channels. It does not cover bookings that start in Messenger. Hostayo does not sync with Airbnb or Booking.com yet, so keep any channel calendar in step by hand until iCal sync ships.",
+          "No. iCal sync refreshes on a schedule, so two channels can still sell the same night inside that gap, and it never sees bookings that start in Messenger. Hostayo does not sync with Airbnb or Booking.com yet, so keep any channel calendar in step by hand. When iCal arrives, treat it as a safety net: check the calendar right before you confirm.",
         ],
       },
     ],
@@ -59,7 +59,7 @@ export const GUIDES: Guide[] = [
     slug: "track-guest-deposits",
     title: "How to track guest deposits and balances",
     description:
-      "Lost track of who paid the deposit? A simple way for short-stay hosts to record deposits, balances and refunds so you and your guest see the same number.",
+      "Lost track of who paid the deposit? A simple way for staycation hosts to record deposits, balances and refunds so you and your guest see the same number.",
     h1: "How do I track guest deposits and balances?",
     answer:
       "Record every payment against the booking the moment it arrives, with the amount, date and method. Keep the security deposit separate from income. Then share the balance with the guest so there is one number.",
@@ -97,9 +97,9 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "turnover-cleaning-checklist",
-    title: "Turnover cleaning checklist for a short-stay unit",
+    title: "Turnover cleaning checklist for a staycation unit",
     description:
-      "A simple turnover cleaning checklist for short-stay units, plus how to hand it to your cleaner so every unit is guest-ready before the next arrival.",
+      "A simple turnover cleaning checklist for staycation units, plus how to hand it to your cleaner so every unit is guest-ready before the next arrival.",
     h1: "What goes on a turnover cleaning checklist?",
     answer:
       "A good checklist covers the bed, bathroom, kitchen, floors, restock and a final walk-through, in the same order every time. Send it the moment a guest checks out so the unit is Ready before the next arrival.",

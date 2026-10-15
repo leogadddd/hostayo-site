@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_URL = "https://hostayo.casa";
 export const SITE_NAME = "Hostayo";
 export const DEFAULT_DESCRIPTION =
-  "Bookings, payments, turnovers and expenses for short-stay hosts in the Philippines.";
+  "A management app for your staycation: bookings, guests, payments, turnovers and expenses in one place.";
 /** Bump when page content changes in a way search engines should notice. */
 export const HOME_TITLE =
   "Hostayo — booking management for Philippine short-stay hosts";

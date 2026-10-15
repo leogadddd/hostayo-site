@@ -19,7 +19,7 @@ import { DEFAULT_DESCRIPTION, HOME_TITLE, pageMetadata, SITE_URL } from "@/lib/s
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_TITLE,
-  description: `${DEFAULT_DESCRIPTION} Free early access.`,
+  description: `${DEFAULT_DESCRIPTION} Free to use.`,
   path: "/",
 });
 
@@ -33,7 +33,7 @@ const HOME_SCHEMA = [
     operatingSystem: "Web",
     description: DEFAULT_DESCRIPTION,
     inLanguage: "en-PH",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "PHP", description: "Free during early access" },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "PHP", description: "Free" },
     publisher: { "@id": `${SITE_URL}/#organization` },
   },
   {
@@ -53,7 +53,7 @@ const DEMO_URL =
 const EARLY_ACCESS = "#early-access";
 
 const BUILT_FOR = [
-  "One room or a whole portfolio",
+  "Your staycation, start to finish",
   "Direct bookings from Messenger & Facebook",
   "Deposits & balances tracked",
   "Cleaners & caretakers",
@@ -70,20 +70,20 @@ const NUMBERS = [
   {
     value: 1,
     suffix: "",
-    label: "calendar for every unit",
-    note: "One room or fifty, they all live in the same view.",
+    label: "calendar for your staycation",
+    note: "Every unit and every stay in the same view.",
   },
   {
-    value: 4,
+    value: 1,
     suffix: "",
-    label: "roles with their own access",
-    note: "Owner, Admin, Operations Manager, Staff.",
+    label: "place for your money",
+    note: "Cash collected, deposits held and expenses, each labelled.",
   },
   {
     value: 0,
     suffix: "",
-    label: "overlapping bookings",
-    note: "Blocked, even when two people book at once.",
+    label: "overlaps entered in Hostayo",
+    note: "Dates already taken here can’t be booked again. Other channels can lag, so check before you confirm.",
   },
 ];
 
@@ -153,16 +153,16 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
             <p className="mb-5 text-sm font-semibold tracking-wide text-clay uppercase">
-              Booking management for short-stay hosts in the Philippines
+              The management app for your staycation in the Philippines
             </p>
             <h1 className="mx-auto max-w-4xl font-display text-5xl leading-[1.03] font-extrabold tracking-tight text-pine sm:text-7xl">
               Run your stays like a business, not a{" "}
               <span className="text-clay">group chat.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pine/75">
-              Hostayo helps Philippine hosts fill their calendar, get paid on
-              time and keep every unit guest-ready, without the spreadsheets and
-              screenshots.
+              Hostayo is a management app for your staycation. Keep your calendar,
+              guests, payments and cleaning in one place, without the
+              spreadsheets and screenshots.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-5">
               <a

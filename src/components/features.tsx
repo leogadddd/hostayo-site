@@ -8,7 +8,7 @@ const GROUPS = [
     question: "How do I manage bookings and my calendar?",
     blurb: "Know who’s arriving, staying and leaving, at a glance.",
     items: [
-      ["One calendar for every unit", "All your properties and units on a single view. Overlapping bookings are blocked."],
+      ["One calendar for every unit", "Your whole staycation on a single view. Overlapping bookings entered in Hostayo are blocked."],
       ["Reservations, start to finish", "Confirm, check in, check out, extend or cancel, all from the booking itself."],
       ["Inventory & availability", "Keep track of what’s in each unit and which dates are open."],
     ],
@@ -61,7 +61,7 @@ const GROUPS = [
 
 const COMING_SOON = [
   [Tag, "Seasonal pricing", "Weekend and peak rates, discounts and minimum stays."],
-  [RefreshCw, "Calendar sync", "Two-way iCal sync with your other booking channels."],
+  [RefreshCw, "Calendar sync", "iCal import and export for your other booking channels. Syncs refresh on a delay, so overlaps are flagged for you to resolve."],
   [BarChart3, "Owner reports", "Monthly income and profit per unit, exportable as PDF or CSV."],
   [MessageCircle, "Guest messaging", "Automatic confirmation and reminder messages."],
 ] as const;

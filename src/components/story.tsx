@@ -7,8 +7,8 @@ import { ChartViz, OverlapViz, PaymentViz, TurnoverViz } from "./visuals";
 const MOMENTS = [
   {
     time: "06:40",
-    title: "A message comes in, and the dates are safe.",
-    body: "Someone asks about the weekend. You block the exact dates in seconds. If another guest tries the same nights, Hostayo blocks it, even if two people book at once.",
+    title: "A message comes in, and you see what’s free.",
+    body: "Someone asks about the weekend. You check the calendar, then hold the exact dates in seconds. Hostayo won’t let you book the same nights twice on its own calendar, so you see a clash before you promise anything.",
     visual: <OverlapViz />,
   },
   {

@@ -3,16 +3,16 @@ import { GUIDES } from "@/content/guides";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Guides for short-stay hosts in the Philippines",
+  title: "Guides for staycation hosts in the Philippines",
   description:
-    "Short, practical guides for short-stay hosts: avoid double bookings, track deposits and balances, and run a turnover cleaning checklist.",
+    "Short, practical guides for staycation hosts: avoid double bookings, track deposits and balances, and run a turnover cleaning checklist.",
   path: "/guides",
 });
 
 export default function GuidesIndex() {
   return (
     <DocPage crumbs={[{ name: "Guides", path: "/guides" }]}>
-      <H1>Guides for short-stay hosts</H1>
+      <H1>Guides for staycation hosts</H1>
       <p className="mt-4 text-lg leading-relaxed text-pine/75">Short answers to the questions hosts ask most.</p>
       <ul className="mt-10 space-y-4">
         {GUIDES.map((g) => (

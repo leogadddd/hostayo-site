@@ -65,12 +65,12 @@ export default async function GuidePage({ params }: Props) {
         ))}
         <li>
           <a href="/vs/spreadsheets-and-messenger" className="font-medium text-pine underline underline-offset-4 hover:text-clay">
-            Is a spreadsheet enough to run a short-stay?
+            Why not just use a spreadsheet?
           </a>
         </li>
       </ul>
 
-      <Cta text="Try Hostayo free in early access" />
+      <Cta text="Try Hostayo free" />
     </DocPage>
   );
 }
