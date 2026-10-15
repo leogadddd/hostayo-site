@@ -6,8 +6,8 @@ export const DEFAULT_DESCRIPTION =
   "A management app for your staycation: bookings, guests, payments, turnovers and expenses in one place.";
 /** Bump when page content changes in a way search engines should notice. */
 export const HOME_TITLE =
-  "Hostayo — booking management for Philippine short-stay hosts";
-const SOCIAL_IMAGE_ALT = "Hostayo — run your stays like a business. Get early access.";
+  "Hostayo | A management app for your staycation";
+const SOCIAL_IMAGE_ALT = "Hostayo | Run your stays like a business. Get early access.";
 export const CONTENT_UPDATED = "2026-10-13";
 
 /**

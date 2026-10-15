@@ -12,7 +12,7 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["700", "800"], vari
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
-  title: { default: HOME_TITLE, template: "%s · Hostayo" },
+  title: { default: HOME_TITLE, template: "%s | Hostayo" },
   description: DEFAULT_DESCRIPTION,
   // Optional Google Search Console meta-tag verification (DNS verification needs no code).
   verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
