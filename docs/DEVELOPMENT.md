@@ -17,7 +17,7 @@ Technical notes for working on the marketing site.
 ```bash
 npm install
 cp .env.example .env     # then fill in the values below
-npm run dev              # http://localhost:3000
+npm run dev              # http://localhost:4000
 ```
 
 | Command | Purpose |
