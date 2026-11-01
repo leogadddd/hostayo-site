@@ -1,4 +1,4 @@
-import { BarChart3, CalendarDays, Check, ClipboardCheck, FileText, KeyRound, MessageCircle, RefreshCw, Tag } from "lucide-react";
+import { BarChart3, Building2, CalendarDays, Check, ClipboardCheck, CreditCard, Download, FileText, Fingerprint, Inbox, KeyRound, MessageCircle, Receipt, RefreshCw, ShieldCheck, UserPlus } from "lucide-react";
 import { Reveal } from "./reveal";
 
 const GROUPS = [
@@ -11,6 +11,7 @@ const GROUPS = [
       ["One calendar for every unit", "Your whole staycation on a single view. Overlapping bookings entered in Hostayo are blocked."],
       ["Reservations, start to finish", "Confirm, check in, check out, extend or cancel, all from the booking itself."],
       ["Inventory & availability", "Keep track of what’s in each unit and which dates are open."],
+      ["Seasonal pricing", "Weekend, holiday and peak rates and discounts, for one unit or every unit, plus a minimum stay."],
     ],
   },
   {
@@ -60,10 +61,17 @@ const GROUPS = [
 ] as const;
 
 const COMING_SOON = [
-  [Tag, "Seasonal pricing", "Weekend and peak rates, discounts and minimum stays."],
-  [RefreshCw, "Calendar sync", "iCal import and export for your other booking channels. Syncs refresh on a delay, so overlaps are flagged for you to resolve."],
-  [BarChart3, "Owner reports", "Monthly income and profit per unit, exportable as PDF or CSV."],
-  [MessageCircle, "Guest messaging", "Automatic confirmation and reminder messages."],
+  [RefreshCw, "Calendar sync", "iCal import and export for Airbnb, Booking.com and Agoda. Syncs refresh on a delay, so overlaps are flagged for you to resolve."],
+  [CreditCard, "Online payments", "Guests pay the deposit or balance from their welcome page, and the payment is recorded against the booking."],
+  [MessageCircle, "Message templates", "Ready-made confirmation, directions, payment reminder and thank-you messages for Messenger, Viber and WhatsApp."],
+  [Receipt, "Invoices & receipts", "Send a receipt for every payment and an invoice for every booking, with your logo."],
+  [ShieldCheck, "Refund limits per staff", "Set how much each team member can refund or discount without you."],
+  [Inbox, "Booking requests", "Guests ask for dates on your public page, and the request arrives as a hold."],
+  [BarChart3, "Owner reports", "Monthly income and profit per unit in your inbox, exportable as PDF or CSV."],
+  [Building2, "Condo guest forms", "Guest registration and gate pass details ready for your building’s admin office."],
+  [UserPlus, "Extra guest charges", "Charge per extra guest above a unit’s base occupancy."],
+  [Download, "Guest data requests", "Download or erase a guest’s data when they ask, under the Data Privacy Act."],
+  [Fingerprint, "Passkeys & devices", "Sign in with your fingerprint or face, and sign out of other devices."],
 ] as const;
 
 export function Features() {

@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const SITE_URL = "https://hostayo.casa";
 export const SITE_NAME = "Hostayo";
 export const DEFAULT_DESCRIPTION =
-  "A management app for your staycation: bookings, guests, payments, turnovers and expenses in one place.";
+  "Booking and front-desk software for Philippine homestays, guest houses, bnbs and staycations: bookings, guests, payments, turnovers and expenses in one place.";
 /** Bump when page content changes in a way search engines should notice. */
 export const HOME_TITLE =
-  "Hostayo | A management app for your staycation";
+  "Hostayo | Every stay, in one place";
 const SOCIAL_IMAGE_ALT = "Hostayo | Run your stays like a business. Get early access.";
-export const CONTENT_UPDATED = "2026-10-13";
+export const CONTENT_UPDATED = "2026-11-01";
 
 /**
  * Per-page metadata with its own canonical. Every page must call this: a

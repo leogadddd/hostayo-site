@@ -7,11 +7,11 @@ export interface Faq {
 export const HOME_FAQS: Faq[] = [
   {
     q: "What is Hostayo?",
-    a: "Hostayo is a management app for your staycation. It keeps your calendar, guests, balances, cleaning checklists and expenses in one place.",
+    a: "Hostayo is booking and front-desk software for homestays, guest houses, bnbs, villas, small resorts and staycations in the Philippines. It keeps your calendar, guests, balances, cleaning checklists and expenses in one place. We built it while getting our own bnb ready to open.",
   },
   {
     q: "Will Hostayo stop double bookings?",
-    a: "It helps, but no app can promise it. Hostayo keeps one calendar for your staycation and blocks overlapping bookings entered in it, even when two people book at once. Bookings made on other channels only appear after a sync, so there is always a short window to double-check before you confirm.",
+    a: "It helps, but no app can promise it. Hostayo keeps one calendar for all your units and blocks overlapping bookings entered in it, even when two people book at once. Bookings made on other channels only appear after a sync, so there is always a short window to double-check before you confirm.",
   },
   {
     q: "Can I track deposits and balances for each guest?",
@@ -23,7 +23,11 @@ export const HOME_FAQS: Faq[] = [
   },
   {
     q: "How much does Hostayo cost?",
-    a: "Hostayo is free. Early hosts also get help setting up their first units.",
+    a: "Your first property is free, with as many units as it has. Each property after that will need a subscription; we will announce the price before paid plans start. Early hosts also get help setting up their first units.",
+  },
+  {
+    q: "Can guests pay online?",
+    a: "Not yet. Online payments are planned. Today you record GCash, Maya, bank and cash payments yourself, and guests can send proof of payment from their welcome page for you to check.",
   },
   {
     q: "Can my cleaner use it?",

@@ -19,7 +19,7 @@ import { DEFAULT_DESCRIPTION, HOME_TITLE, pageMetadata, SITE_URL } from "@/lib/s
 
 export const metadata: Metadata = pageMetadata({
   title: HOME_TITLE,
-  description: `${DEFAULT_DESCRIPTION} Free to use.`,
+  description: `${DEFAULT_DESCRIPTION} Free for your first property.`,
   path: "/",
 });
 
@@ -33,7 +33,7 @@ const HOME_SCHEMA = [
     operatingSystem: "Web",
     description: DEFAULT_DESCRIPTION,
     inLanguage: "en-PH",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "PHP", description: "Free" },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "PHP", description: "Free for your first property" },
     publisher: { "@id": `${SITE_URL}/#organization` },
   },
   {
@@ -53,7 +53,7 @@ const DEMO_URL =
 const EARLY_ACCESS = "#early-access";
 
 const BUILT_FOR = [
-  "Your staycation, start to finish",
+  "Homestays, guest houses & bnbs",
   "Direct bookings from Messenger & Facebook",
   "Deposits & balances tracked",
   "Cleaners & caretakers",
@@ -70,7 +70,7 @@ const NUMBERS = [
   {
     value: 1,
     suffix: "",
-    label: "calendar for your staycation",
+    label: "calendar for every property",
     note: "Every unit and every stay in the same view.",
   },
   {
@@ -153,15 +153,16 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
             <p className="mb-5 text-sm font-semibold tracking-wide text-clay uppercase">
-              The management app for your staycation in the Philippines
+              Every stay, in one place
             </p>
             <h1 className="mx-auto max-w-4xl font-display text-5xl leading-[1.03] font-extrabold tracking-tight text-pine sm:text-7xl">
-              Run your stays like a business, not a{" "}
-              <span className="text-clay">group chat.</span>
+              Every booking, guest and peso,{" "}
+              <span className="text-clay">in one place.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pine/75">
-              Hostayo is a management app for your staycation. Keep your calendar,
-              guests, payments and cleaning in one place, without the
+              Hostayo is booking and front-desk software for homestays, guest
+              houses, bnbs, villas and small resorts in the Philippines. Keep your
+              calendar, guests, payments and cleaning together, without the
               spreadsheets and screenshots.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-5">

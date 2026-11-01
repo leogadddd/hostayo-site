@@ -7,7 +7,7 @@ const DEMO_URL =
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://app.hostayo.casa";
 
 const PROMISES = [
-  "Free to use.",
+  "Free for your first property.",
   "We’ll help you set up your first units.",
   "Your feedback shapes what we build next.",
 ];

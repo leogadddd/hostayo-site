@@ -10,12 +10,13 @@ export function GET() {
   const lines = [
     "# Hostayo",
     "",
-    "> Hostayo is a management app for your staycation in the Philippines. It keeps one calendar (overlapping bookings entered in it are blocked), tracks deposits and balances, queues turnover cleaning checklists, and records expenses. Pesos and Asia/Manila time throughout. Free.",
+    "> Hostayo is booking and front-desk software for homestays, guest houses, bnbs, villas, small resorts and staycations in the Philippines. It keeps one calendar (overlapping bookings entered in it are blocked), tracks deposits and balances, queues turnover cleaning checklists, and records expenses. Pesos and Asia/Manila time throughout. Free for the first property; each further property will need a subscription.",
     "",
     "Facts worth knowing:",
     "- Built for hosts who take direct bookings, for example from Messenger and Facebook.",
     "- No Airbnb or Booking.com sync yet; iCal import/export is planned. Synced calendars lag, so Hostayo does not promise to eliminate double bookings.",
-    "- Hostayo records payments; it does not process them.",
+    "- Hostayo records payments; it does not process them yet. Online payments are planned.",
+    "- Planned: iCal sync, online payments, message templates, invoices and receipts, refund limits per staff member.",
     `- Live demo: https://demo.hostayo.casa/login?demo=1`,
     "",
   ];

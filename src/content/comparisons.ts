@@ -99,7 +99,7 @@ export const VS: Vs[] = [
       },
       {
         label: "Cost",
-        hostayo: "Free.",
+        hostayo: "Free for your first property.",
         other: "Free.",
       },
     ],
@@ -122,7 +122,7 @@ export const VS: Vs[] = [
     name: "Hostaway",
     title: "Hostayo vs Hostaway for staycation hosts in the Philippines",
     description:
-      "Why a staycation host may prefer Hostayo over Hostaway: simpler to run, peso and Manila time by default, deposits and cleaning built in, and free.",
+      "Why a staycation host may prefer Hostayo over Hostaway: simpler to run, peso and Manila time by default, deposits and cleaning built in, and free for your first property.",
     h1: "Hostayo vs Hostaway: why Hostayo suits a staycation host better",
     answer:
       "Hostaway is built for professional managers running many listings across channels. Hostayo is built for one host running their own staycation: pesos and Manila time by default, deposits and balances guests can see, turnover cleaning, and expenses, with no sales call and no setup project.",
@@ -183,7 +183,7 @@ export const VS: Vs[] = [
       },
       {
         label: "Pricing",
-        hostayo: "Free.",
+        hostayo: "Free for your first property.",
         other: "Paid, priced for professional operators. See their site.",
       },
     ],
@@ -203,7 +203,7 @@ export const VS: Vs[] = [
     name: "Guesty",
     title: "Hostayo vs Guesty for staycation hosts in the Philippines",
     description:
-      "Why a staycation host may prefer Hostayo over Guesty: a lighter management app with calendar, guests, deposits, cleaning and expenses, free.",
+      "Why a staycation host may prefer Hostayo over Guesty: a lighter management app with calendar, guests, deposits, cleaning and expenses, free for your first property.",
     h1: "Hostayo vs Guesty: why Hostayo fits a staycation host",
     answer:
       "Guesty is a platform for professional managers with channel distribution, automation and owner tools. Hostayo does the daily work of one host’s staycation (calendar, guests, deposits, cleaning, expenses) in a calmer app you can learn in an afternoon.",
@@ -228,7 +228,7 @@ export const VS: Vs[] = [
       },
       {
         title: "No onboarding project",
-        body: "Add your units and go. Free, with help setting up your first units.",
+        body: "Add your units and go. Free for your first property, with help setting up your first units.",
       },
     ],
     rows: [
@@ -259,7 +259,7 @@ export const VS: Vs[] = [
       },
       {
         label: "Pricing",
-        hostayo: "Free.",
+        hostayo: "Free for your first property.",
         other: "Paid, aimed at professional operators. See their site.",
       },
     ],
@@ -303,7 +303,7 @@ export const VS: Vs[] = [
         body: "Security deposits, refunds and damage deductions are recorded against the stay.",
       },
       {
-        title: "Free",
+        title: "Free for your first property",
         body: "No monthly plan to pick before you know it fits.",
       },
     ],
@@ -335,7 +335,7 @@ export const VS: Vs[] = [
       },
       {
         label: "Pricing",
-        hostayo: "Free.",
+        hostayo: "Free for your first property.",
         other: "Paid monthly plans. See their site.",
       },
     ],
@@ -378,7 +378,7 @@ const SWITCH_ADVANTAGES = [
     body: "Collected cash, held deposits and expenses are separate and labelled, in pesos.",
   },
   {
-    title: "Free",
+    title: "Free for your first property",
     body: "No plan to choose before you know it fits.",
   },
 ];
@@ -398,7 +398,7 @@ export const ALTERNATIVES: Alternatives[] = [
       {
         name: "Hostayo",
         fit: "Staycation hosts in the Philippines who want the whole stay managed in one app.",
-        note: "Calendar, guest welcome pages, deposits, cleaning and expenses. Free.",
+        note: "Calendar, guest welcome pages, deposits, cleaning and expenses. Free for your first property.",
         href: "/vs/hostaway",
       },
       {
@@ -435,7 +435,7 @@ export const ALTERNATIVES: Alternatives[] = [
       {
         name: "Hostayo",
         fit: "Staycation hosts whose guests book through Messenger and Facebook.",
-        note: "A management app for the whole stay. Free.",
+        note: "A management app for the whole stay. Free for your first property.",
         href: "/vs/guesty",
       },
       {
@@ -472,7 +472,7 @@ export const ALTERNATIVES: Alternatives[] = [
       {
         name: "Hostayo",
         fit: "Hosts who take bookings in Messenger and Facebook and want the stay managed.",
-        note: "Calendar, deposits, cleaning and expenses. Free.",
+        note: "Calendar, deposits, cleaning and expenses. Free for your first property.",
         href: "/vs/lodgify",
       },
       {
